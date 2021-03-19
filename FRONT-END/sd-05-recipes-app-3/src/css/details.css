@@ -1,0 +1,132 @@
+/*
+details.css Contribuiter: Elisangelo,
+
+para acessar elementos filhos de uma classe faca:
+classeDoElementPai elementoDesejado {
+  regras css
+}
+ex: image-details img {
+}
+*/
+
+.ingredients-details {
+  border-top: solid 2px rgb(237, 95, 101);
+  display: block;
+  font-family: Courgette, cursive;
+  margin-top: 20px;
+}
+
+.instructions-details {
+  border-bottom: solid 2px rgb(237, 95, 101);
+  border-top: solid 2px rgb(237, 95, 101);
+  display: block;
+  font-family: Courgette, cursive;
+}
+
+.video-details video {
+  display: block;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.recomendations-details {
+  display: block;
+}
+
+.recomendadas {
+  font-family: Courgette, cursive;
+  margin-top: 20px;
+}
+
+.card-body {
+  align-items: center;
+  background-color: rgb(247, 206, 93);
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.card-details {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Courgette, cursive;
+  height: 30vh;
+  margin: 5px auto;
+  position: relative;
+  width: 90%;
+}
+
+.body-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  margin-bottom: 35px;
+  max-width: 1260px;
+  width: 100%;
+}
+
+.start-recipe-button button , .finish-recipe-button button {
+  background-color: green;
+  bottom: 0;
+  color: white;
+  font-weight: 700;
+  left: 0;
+  line-height: 25px;
+  position: fixed;
+}
+
+/* .icon-favorite img , .icon-share input {
+  display: flex;
+  margin: 5px auto;
+  width: 8vw;
+} */
+
+.icon-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.carroussel {
+  border: dashed 2px rgb(237, 95, 101);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  overflow-x: auto;
+  position: relative;
+  top: auto;
+  width: 95%;
+}
+
+.carroussel-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  width: 90%;
+}
+
+.carroussel img {
+  border-radius: 10px;
+  padding: 5px;
+  width: 45vw;
+}
+
+.image-details {
+  margin: auto;
+  position: relative;
+  top: auto;
+  width: 100vw;
+}
+
+.image-details img {
+  background-color: whitesmoke;
+  display: flex;
+  height: 57vh;
+  margin: auto;
+  position: relative;
+  top: auto;
+}

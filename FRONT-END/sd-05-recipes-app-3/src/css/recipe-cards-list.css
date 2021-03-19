@@ -1,0 +1,56 @@
+/* Recipe-cards-list.css individual style by Elisângelo */
+.card-recipe {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 1vw;
+  margin-bottom: 1vh;
+  max-width: 20vw;
+  min-width: 10pc;
+  position: static;
+  top: 12vw;
+}
+
+.card-recipe a {
+  background-color: rgb(253, 253, 252);
+  color: black;
+  text-decoration: none;
+}
+
+.card-recipe-image {
+  border: outset 2px rgb(237, 95, 101);
+  border-radius: 15%;
+  width: 100%;
+}
+
+.card-recipe-name {
+  background-color: rgb(247, 206, 93);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 12px;
+}
+
+.card-recipe-subtitle {
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.list-of-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20%;
+  min-width: 260px;
+  position: relative;
+  top: 10vh;
+  z-index: 0;
+}
+
+.sharing {
+  background-color: #007bff;
+  padding: 3px 9px;
+}

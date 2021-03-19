@@ -1,0 +1,60 @@
+.title {
+  background-color: rgb(151, 156, 160);
+  border: dashed 5px rgb(237, 95, 101);
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 8vh;
+  margin-top: 24vh;
+  width: 18em;
+}
+
+.login-page {
+  background-color: rgb(237, 95, 101);
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.login-input {
+  align-items: flex-end;
+  display: flex;
+  height: 10vh;
+  margin: 10px auto;
+  position: relative;
+  top: 10vh;
+  width: 300px;
+}
+
+.login-input input {
+  background-color: white;
+  border: 2px solid rgb(247, 206, 93);
+  border-radius: 50px;
+  color: black;
+  font-size: 20px;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.enter {
+  display: flex;
+  margin: 0 auto;
+}
+
+.enter button {
+  background-color: rgb(247, 206, 93);
+  border: 1px solid black;
+  border-radius: 50px;
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 14vh auto;
+  padding: 15px 0;
+  position: relative;
+  width: 300px;
+}
+
+button:disabled {
+  background-color: lightgray;
+  border: 1px solid gray;
+}

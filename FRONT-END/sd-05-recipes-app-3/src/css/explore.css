@@ -1,0 +1,45 @@
+.explore-buttons {
+  align-items: center;
+  background-color: rgb(193, 193, 212);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 250px;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+.buttons , a {
+  text-decoration: none;
+}
+
+.buttons button {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px auto;
+}
+
+.surprise button {
+  background-color: rgb(34, 245, 27);
+}
+
+.select-origin {
+  display: flex;
+  height: 2pc;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  top: 11vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.select-origin select , option {
+  background-color: rgb(14, 130, 134);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  width: 85vw;
+}

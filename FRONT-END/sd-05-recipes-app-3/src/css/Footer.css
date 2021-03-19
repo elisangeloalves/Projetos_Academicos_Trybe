@@ -1,0 +1,22 @@
+/* Footer.css individual style by Elisângelo */
+.footer {
+  background: linear-gradient(to bottom, transparent 0%, rgb(237, 95, 101) 13%);
+  bottom: 0;
+  display: flex;
+  height: 11vh;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+}
+
+.footBar {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+.drink , .explorer , .food {
+  display: flex;
+  padding: 10px 0;
+}

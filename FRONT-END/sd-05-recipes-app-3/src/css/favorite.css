@@ -1,0 +1,95 @@
+/*  Made by Elisângelo
+.body-page1 {
+  display: flex;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  top: 10vh;
+}
+*/
+
+.body-page {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 2vh auto;
+  max-width: 1024px;
+  position: relative;
+  top: 12vh;
+  width: 100vw;
+}
+
+.icon-favorite img , .icon-share img {
+  display: block;
+  font-style: normal;
+  margin: 0;
+  position: relative;
+  width: 10vw;
+  z-index: 1;
+}
+
+.card-body {
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  height: fit-content;
+  justify-content: space-around;
+  margin: 5px;
+  position: relative;
+  top: 2vh;
+  width: 95%;
+}
+
+.info {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.icon-favorites {
+  bottom: 2px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.image {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image img {
+  background-color: whitesmoke;
+  margin: auto;
+  width: 35vw;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 4vmin;
+  justify-content: space-around;
+  line-height: 10px;
+  text-align: center;
+}
+
+.favorite {
+  color: #1c1d1d;
+  display: block;
+  font-weight: 300;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.filterByType {
+  color: black;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+  top: 12vh;
+  z-index: 0;
+}

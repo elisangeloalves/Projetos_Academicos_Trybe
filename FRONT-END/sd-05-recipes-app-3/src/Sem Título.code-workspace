@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../sd-05-block12-project-movie-card-library-stateful"
+		}
+	],
+	"settings": {
+		"prettier.printWidth": 100,
+		"prettier.singleQuote": true
+	}
+}
