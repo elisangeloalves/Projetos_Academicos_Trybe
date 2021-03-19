@@ -1,0 +1,851 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 28,
+    "passes": 0,
+    "pending": 0,
+    "failures": 28,
+    "start": "2020-10-01T01:56:28.337Z",
+    "end": "2020-10-01T01:56:57.234Z",
+    "duration": 28897,
+    "testsRegistered": 28,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f053e8ec-beae-4a88-ba3f-3c35cffa371f",
+      "title": "",
+      "fullFile": "cypress/integration/recipe_in_progress_spec.js",
+      "file": "cypress/integration/recipe_in_progress_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3de281de-d5b1-4cb0-9fa9-167e9737dd1c",
+          "title": "Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica elementos de uma receita de comida",
+              "fullTitle": "Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções verifica elementos de uma receita de comida",
+              "timedOut": null,
+              "duration": 1332,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]');\ncy.get('[data-testid=\"recipe-title\"]');\ncy.get('[data-testid=\"share-btn\"]');\ncy.get('[data-testid=\"favorite-btn\"]');\ncy.get('[data-testid=\"recipe-category\"]');\ncy.get('[data-testid*=\"ingredient-step\"]').should('have.length', 8);\ncy.get('[data-testid=\"instructions\"]');\ncy.get('[data-testid=\"finish-recipe-btn\"]');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "75e11899-23ab-4892-85db-72c60be873f5",
+              "parentUUID": "3de281de-d5b1-4cb0-9fa9-167e9737dd1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica elementos de uma receita de bebida",
+              "fullTitle": "Essa tela deve conter uma imagem da receita, seu titulo, sua categoria (ou se a bebida é alcoólica ou não) uma lista de ingredientes com suas respectivas quantidades, e suas instruções verifica elementos de uma receita de bebida",
+              "timedOut": null,
+              "duration": 723,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]');\ncy.get('[data-testid=\"recipe-title\"]');\ncy.get('[data-testid=\"share-btn\"]');\ncy.get('[data-testid=\"favorite-btn\"]');\ncy.get('[data-testid=\"recipe-category\"]');\ncy.get('[data-testid*=\"ingredient-step\"]').should('have.length', 3);\ncy.get('[data-testid=\"instructions\"]');\ncy.get('[data-testid=\"finish-recipe-btn\"]');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "188f6411-fae2-42d2-b2a3-07d9da2ba445",
+              "parentUUID": "3de281de-d5b1-4cb0-9fa9-167e9737dd1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "75e11899-23ab-4892-85db-72c60be873f5",
+            "188f6411-fae2-42d2-b2a3-07d9da2ba445"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2055,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "79c6497e-29a3-42fb-83d6-800f8ba8c867",
+          "title": "A lista de ingredientes deve conter um checkbox para cada um dos items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "todos os ingredientes de uma receita de comida possuem um checkbox",
+              "fullTitle": "A lista de ingredientes deve conter um checkbox para cada um dos items todos os ingredientes de uma receita de comida possuem um checkbox",
+              "timedOut": null,
+              "duration": 830,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').should('have.length', 8);",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "baba7b9c-c8c6-4a41-ac27-594a507a4d3d",
+              "parentUUID": "79c6497e-29a3-42fb-83d6-800f8ba8c867",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "todos os ingredientes de uma receita de bebida possuem um checkbox",
+              "fullTitle": "A lista de ingredientes deve conter um checkbox para cada um dos items todos os ingredientes de uma receita de bebida possuem um checkbox",
+              "timedOut": null,
+              "duration": 695,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').should('have.length', 3);",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "6ebf9bc6-1d05-4644-98c0-2bc93cc0007a",
+              "parentUUID": "79c6497e-29a3-42fb-83d6-800f8ba8c867",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "baba7b9c-c8c6-4a41-ac27-594a507a4d3d",
+            "6ebf9bc6-1d05-4644-98c0-2bc93cc0007a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1f359711-a459-4f5c-a064-ee0db02c7675",
+          "title": "Ao clicar no checkbox de um ingrediente, o nome dele deve ser \"riscado\" da lista",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica se é possível marcar todos os passos da receita de comida",
+              "fullTitle": "Ao clicar no checkbox de um ingrediente, o nome dele deve ser \"riscado\" da lista verifica se é possível marcar todos os passos da receita de comida",
+              "timedOut": null,
+              "duration": 765,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ngetIngredients().check();\ngetIngredients().should('have.css', 'text-decoration', 'none solid rgb(0, 0, 0)');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "a87777ab-b784-4ad9-9f08-a1cf132a17e4",
+              "parentUUID": "1f359711-a459-4f5c-a064-ee0db02c7675",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica se é possível marcar todos os passos da receita de bebida",
+              "fullTitle": "Ao clicar no checkbox de um ingrediente, o nome dele deve ser \"riscado\" da lista verifica se é possível marcar todos os passos da receita de bebida",
+              "timedOut": null,
+              "duration": 729,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ngetIngredients().check();\ngetIngredients().should('have.css', 'text-decoration', 'none solid rgb(0, 0, 0)');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "4b1ca77b-fbbe-41f0-88cf-76d6f84a809e",
+              "parentUUID": "1f359711-a459-4f5c-a064-ee0db02c7675",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a87777ab-b784-4ad9-9f08-a1cf132a17e4",
+            "4b1ca77b-fbbe-41f0-88cf-76d6f84a809e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1494,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0b483192-49fc-4a61-bfcb-a1ee6b83e95f",
+          "title": "O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "salva o progresso de uma receita de comida em andamento",
+              "fullTitle": "O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita salva o progresso de uma receita de comida em andamento",
+              "timedOut": null,
+              "duration": 781,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.reload();\ncy.get('[data-testid=\"0-ingredient-step\"]').find('input[type=\"checkbox\"]').should('have.attr', 'checked');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "45ee7e0d-71b4-4e85-8489-b0d0aae63fe1",
+              "parentUUID": "0b483192-49fc-4a61-bfcb-a1ee6b83e95f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "salva o progresso de uma receita de bebida em andamento",
+              "fullTitle": "O estado do progresso deve ser mantido caso a pessoa atualize a pagina ou volte para a mesma receita salva o progresso de uma receita de bebida em andamento",
+              "timedOut": null,
+              "duration": 750,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.reload();\ncy.get('[data-testid=\"0-ingredient-step\"]').find('input[type=\"checkbox\"]').should('have.attr', 'checked');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "fc3a17ec-bf09-4332-a151-0edb513b5a85",
+              "parentUUID": "0b483192-49fc-4a61-bfcb-a1ee6b83e95f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "45ee7e0d-71b4-4e85-8489-b0d0aae63fe1",
+            "fc3a17ec-bf09-4332-a151-0edb513b5a85"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1531,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+          "title": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica se os botões estão disponíveis na tela de detalhes de uma comida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica se os botões estão disponíveis na tela de detalhes de uma comida",
+              "timedOut": null,
+              "duration": 805,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').should('exist');\ncy.get('[data-testid=\"favorite-btn\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "bc4d08a4-77fe-464f-b49f-09842f1e8f79",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica se os botões estão disponíveis na tela de detalhes de uma bebida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica se os botões estão disponíveis na tela de detalhes de uma bebida",
+              "timedOut": null,
+              "duration": 687,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').should('exist');\ncy.get('[data-testid=\"favorite-btn\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "54209d95-b6ba-4bfb-825b-da4901170af6",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica a mensagem \"Link copiado!\" e se o link da receita da comida foi copiado para o clipboard",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica a mensagem \"Link copiado!\" e se o link da receita da comida foi copiado para o clipboard",
+              "timedOut": null,
+              "duration": 712,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').click();\ncy.contains('Link copiado!');\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "ff0169f2-7d36-4f4d-b256-39788fa37957",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica a mensagem \"Link copiado!\" e se o link da receita da bebida foi copiado para o clipboard",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica a mensagem \"Link copiado!\" e se o link da receita da bebida foi copiado para o clipboard",
+              "timedOut": null,
+              "duration": 742,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').click();\ncy.contains('Link copiado!');\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/bebidas/178319');\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "951374f2-72a5-434d-ac0c-1b459e6e5708",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica comida favoritada",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica comida favoritada",
+              "timedOut": null,
+              "duration": 807,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"52771\",\n      \"type\": \"comida\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"alcoholicOrNot\": \"\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "de33ea88-7992-4d0e-ae54-4984ba1dce25",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica comida não favoritada",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica comida não favoritada",
+              "timedOut": null,
+              "duration": 822,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "c6f8b8e7-9f0d-45b4-a3e5-22a101a65a35",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica bebida favoritada",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica bebida favoritada",
+              "timedOut": null,
+              "duration": 848,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"178319\",\n      \"type\": \"bebida\",\n      \"area\": \"\",\n      \"category\": \"Cocktail\",\n      \"alcoholicOrNot\": \"Alcoholic\",\n      \"name\": \"Aquamarine\",\n      \"image\": \"https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "3cd84c63-1e4c-479e-87c0-eadf2ca90ce2",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica bebida não favoritada",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui verifica bebida não favoritada",
+              "timedOut": null,
+              "duration": 829,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "4a40b93a-6d3a-4f24-8fe4-0642dae614ce",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "favorita comida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui favorita comida",
+              "timedOut": null,
+              "duration": 684,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "b3ade6d2-f849-4401-9bab-d873972657a7",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "desfavorita comida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui desfavorita comida",
+              "timedOut": null,
+              "duration": 931,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"52771\",\n      \"type\": \"comida\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"alcoholicOrNot\": \"\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "e1aaf37d-5988-411c-9262-b455bc0deb2a",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "favorita bebida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui favorita bebida",
+              "timedOut": null,
+              "duration": 925,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "e648c6eb-cd20-4873-8099-43963eaff6c1",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "desfavorita bebida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui desfavorita bebida",
+              "timedOut": null,
+              "duration": 875,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"178319\",\n      \"type\": \"bebida\",\n      \"area\": \"\",\n      \"category\": \"Cocktail\",\n      \"alcoholicOrNot\": \"Alcoholic\",\n      \"name\": \"Aquamarine\",\n      \"image\": \"https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "445707f7-df77-4fca-89ab-d413f42c08f0",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "favorita receita de uma comida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui favorita receita de uma comida",
+              "timedOut": null,
+              "duration": 849,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').click().then(function () {\n  var favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));\n  var expectedFavoriteRecipes = [{\n    id: '52771',\n    type: 'comida',\n    area: 'Italian',\n    category: 'Vegetarian',\n    alcoholicOrNot: '',\n    name: 'Spicy Arrabiata Penne',\n    image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg'\n  }];\n  expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);\n  localStorage.clear();\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "747bbd38-f3e5-4e12-bab3-0d9501fe58a1",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "favorita receita de uma bebida",
+              "fullTitle": "A mesma lógica de favoritar e compartilhar da tela de detalhes de uma receita se aplica aqui favorita receita de uma bebida",
+              "timedOut": null,
+              "duration": 1063,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').click().then(function () {\n  var favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));\n  var expectedFavoriteRecipes = [{\n    id: '178319',\n    type: 'bebida',\n    area: '',\n    category: 'Cocktail',\n    alcoholicOrNot: 'Alcoholic',\n    name: 'Aquamarine',\n    image: 'https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg'\n  }];\n  expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);\n  localStorage.clear();\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "aeaac64f-f1ba-4050-a6d8-a66d61d6f514",
+              "parentUUID": "cf8c0625-1825-4b53-9dcf-d8bf9f1136d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bc4d08a4-77fe-464f-b49f-09842f1e8f79",
+            "54209d95-b6ba-4bfb-825b-da4901170af6",
+            "ff0169f2-7d36-4f4d-b256-39788fa37957",
+            "951374f2-72a5-434d-ac0c-1b459e6e5708",
+            "de33ea88-7992-4d0e-ae54-4984ba1dce25",
+            "c6f8b8e7-9f0d-45b4-a3e5-22a101a65a35",
+            "3cd84c63-1e4c-479e-87c0-eadf2ca90ce2",
+            "4a40b93a-6d3a-4f24-8fe4-0642dae614ce",
+            "b3ade6d2-f849-4401-9bab-d873972657a7",
+            "e1aaf37d-5988-411c-9262-b455bc0deb2a",
+            "e648c6eb-cd20-4873-8099-43963eaff6c1",
+            "445707f7-df77-4fca-89ab-d413f42c08f0",
+            "747bbd38-f3e5-4e12-bab3-0d9501fe58a1",
+            "aeaac64f-f1ba-4050-a6d8-a66d61d6f514"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11579,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "49a6afa7-aba9-4e36-a678-7bf346d75f62",
+          "title": "O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _\"checkados\"_ (marcados)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica se botão para finalizar está desabilitado em receitas de comidas",
+              "fullTitle": "O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _\"checkados\"_ (marcados) verifica se botão para finalizar está desabilitado em receitas de comidas",
+              "timedOut": null,
+              "duration": 760,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').first().check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').should('be.disabled');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "7d25b7ac-4fe2-4aae-9fc9-0f60f7cded51",
+              "parentUUID": "49a6afa7-aba9-4e36-a678-7bf346d75f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica se botão para finalizar está desabilitado em receitas de bebidas",
+              "fullTitle": "O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _\"checkados\"_ (marcados) verifica se botão para finalizar está desabilitado em receitas de bebidas",
+              "timedOut": null,
+              "duration": 949,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').first().check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').should('be.disabled');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "3fe7805a-95e6-456e-be65-7761d32c3cc9",
+              "parentUUID": "49a6afa7-aba9-4e36-a678-7bf346d75f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica se botão para finalizar está habilitado em receitas de comidas",
+              "fullTitle": "O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _\"checkados\"_ (marcados) verifica se botão para finalizar está habilitado em receitas de comidas",
+              "timedOut": null,
+              "duration": 839,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').should('be.enabled');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "b496208e-ab64-4adb-a879-64eb4088e6f6",
+              "parentUUID": "49a6afa7-aba9-4e36-a678-7bf346d75f62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica se botão para finalizar está habilitado em receitas de bebidas",
+              "fullTitle": "O botão de finalizar receita só pode estar habilitado quando todos os ingredientes estiverem _\"checkados\"_ (marcados) verifica se botão para finalizar está habilitado em receitas de bebidas",
+              "timedOut": null,
+              "duration": 793,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').should('be.enabled');",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "c4287d24-fe22-4176-aac0-e0fc73f2f9cc",
+              "parentUUID": "49a6afa7-aba9-4e36-a678-7bf346d75f62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7d25b7ac-4fe2-4aae-9fc9-0f60f7cded51",
+            "3fe7805a-95e6-456e-be65-7761d32c3cc9",
+            "b496208e-ab64-4adb-a879-64eb4088e6f6",
+            "c4287d24-fe22-4176-aac0-e0fc73f2f9cc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0d0c174f-3a05-4bcf-9465-5d8172a8516f",
+          "title": "Após clicar no botão \"Finalizar receita\", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "redireciona após concluir uma receita de comida",
+              "fullTitle": "Após clicar no botão \"Finalizar receita\", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas` redireciona após concluir uma receita de comida",
+              "timedOut": null,
+              "duration": 936,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/receitas-feitas');\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "da4223f9-7e74-44a1-a7e2-c4dfbe39b2ce",
+              "parentUUID": "0d0c174f-3a05-4bcf-9465-5d8172a8516f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "redireciona após concluir uma receita de bebida",
+              "fullTitle": "Após clicar no botão \"Finalizar receita\", a rota deve mudar para a página de receitas feitas, cuja rota deve ser `/receitas-feitas` redireciona após concluir uma receita de bebida",
+              "timedOut": null,
+              "duration": 758,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319/in-progress', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"ingredient-step\"]').find('input[type=\"checkbox\"]').check();\ncy.get('[data-testid=\"finish-recipe-btn\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/receitas-feitas');\n});",
+              "err": {
+                "message": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught Error: Script error.\n\nCypress detected that an uncaught error was thrown from a cross origin script.\n\nWe cannot provide you the stack trace, line number, or file where this error occurred.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nIt's possible to enable debugging these scripts by adding the 'crossorigin' attribute and setting a CORS header.\n\nhttps://on.cypress.io/cross-origin-script-error\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at createErrFromMsg (http://localhost:3000/__cypress/runner/cypress_runner.js:74520:14)\n    at Object.createUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:74525:13)\n    at Object.onUncaughtException (http://localhost:3000/__cypress/runner/cypress_runner.js:81618:24)\n    at onError (http://localhost:3000/__cypress/runner/cypress_runner.js:80717:39)",
+                "diff": null
+              },
+              "uuid": "36373b01-0d8e-46fe-a1c0-4fbcab1768d5",
+              "parentUUID": "0d0c174f-3a05-4bcf-9465-5d8172a8516f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "da4223f9-7e74-44a1-a7e2-c4dfbe39b2ce",
+            "36373b01-0d8e-46fe-a1c0-4fbcab1768d5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1694,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

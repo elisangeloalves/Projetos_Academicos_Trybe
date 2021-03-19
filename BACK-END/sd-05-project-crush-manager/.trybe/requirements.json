@@ -1,0 +1,32 @@
+{
+  "requirements": [
+    {
+      "description": "1 - Crie o endpoint POST /login",
+      "bonus": false
+    },
+    {
+      "description": "2 - Crie o endpoint POST /crush",
+      "bonus": false
+    },
+    {
+      "description": "3 - Crie o endpoint GET /crush",
+      "bonus": false
+    },
+    {
+      "description": "4 - Crie o endpoint GET /crush/:id",
+      "bonus": false
+    },
+    {
+      "description": "5 - Crie o endpoint PUT /crush/:id",
+      "bonus": false
+    },
+    {
+      "description": "6 - Crie o endpoint DELETE /crush/:id",
+      "bonus": false
+    },
+    {
+      "description": "7 - Crie o endpoint GET /crush/search?q=searchTerm",
+      "bonus": false
+    }
+  ]
+}

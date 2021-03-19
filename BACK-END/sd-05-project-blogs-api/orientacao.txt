@@ -1,0 +1,8 @@
+para exluir um atributo de uma entidade no retorno de uma consulta com sequelize
+
+include: [{
+      model: Addresses, as: 'addresses', attributes: { exclude: ['password'] },
+    }],
+include: [{
+      model: Addresses, as: 'addresses', attributes: { exclude: ['number', 'userId'] },
+    }],

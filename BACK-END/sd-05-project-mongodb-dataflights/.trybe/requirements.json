@@ -1,0 +1,144 @@
+{
+  "requirements": [
+    {
+      "identifier": "desafio1",
+      "description": "Retorne a quantidade de documentos inseridos na coleção `voos`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio2",
+      "description": "Retorne os 10 primeiros documentos com voos da empresa `AZUL`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio3",
+      "description": "Retorne a quantidade de voos da empresa `AZUL`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio4",
+      "description": "Retorne a quantidade de voos da empresa `GOL`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio5",
+      "description": "Retorne o `vooId` do décimo ao décimo segundo documento da coleção `voos`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio6",
+      "description": "Retorne apenas os campos `empresa.sigla`, `empresa.nome` e `passageiros` do voo com o campo `vooId` igual a `756807`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio7",
+      "description": "Retorne a quantidade de voos em que o ano seja menor do que `2017`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio8",
+      "description": "Retorne a quantidade de voos em que o ano seja maior do que `2016`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio9",
+      "description": "Retorne a quantidade de voos entre os anos de `2017` e `2018`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio10",
+      "description": "Retorne apenas os **10** primeiros documentos com voos da empresa `GOL` do ano de `2017`. Exiba apenas os campos `vooId`, `empresa.nome`, `aeroportoOrigem.nome`, `aeroportoDestino.nome`, `mes` e `ano`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio11",
+      "description": "Retorne a quantidade de documentos em que o campo `aeroportoDestino.pais` não seja igual a `ESTADOS UNIDOS`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio12",
+      "description": "Conte os documentos em que o campo `aeroportoDestino.pais` seja igual a `BRASIL`, `ARGENTINA` ou `CHILE`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio13",
+      "description": "Conte os documentos em que o campo `aeroportoDestino.continente` não seja igual a `EUROPA`, `ÁSIA` e `OCEANIA`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio14",
+      "description": "Retorne o total de voos em que o país de origem não seja `BRASIL`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio15",
+      "description": "Retorne o total de voos com mais de 20 `decolagens`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio16",
+      "description": "Retorne o total de voos em que o campo `natureza` possui o valor `Internacional`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio17",
+      "description": "Retorne o total de voos em que o campo `natureza` possui o valor `Doméstica`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio18",
+      "description": "Retorne o `vooId`, `mes` e `ano` do primeiro voo com mais de `7000` passageiros pagos",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio19",
+      "description": "Retorne o `vooId` do primeiro voo em que o campo `litrosCombustivel` exista",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio20",
+      "description": "Retorne o `vooId` do primeiro voo em que o campo `rtk` não exista",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio21",
+      "description": "Retorne o `vooId` do primeiro voo em que o campo `litrosCombustivel` seja maior ou igual a `1000`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio22",
+      "description": "Retorne o `vooId` do primeiro voo em que a empresa seja `DELTA AIRLINES` ou `AMERICAN AIRLINES`, a sigla do aeroporto de origem seja `SBGR` e a sigla do aeroporto de destino seja `KJFK`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio23",
+      "description": "Retorne o `vooId` e `litrosCombustivel` do primeiro voo em que o campo `litrosCombustivel` **não seja maior do que** `1000` e o campo `litrosCombustivel` exista",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio24",
+      "description": "Retorne o `vooId`, `empresa.nome` e `litrosCombustivel` do primeiro voo em que `litrosCombustivel` **não seja maior do que** `600` **e** a empresa **não seja** `GOL` **ou** `AZUL`, **e** o campo `litrosCombustivel` exista",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio25",
+      "description": "Remova todos os voos da empresa `AZUL` em que a quantidade de combustível seja menor do que `400`. Informe a quantidade de documentos removidos",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio26",
+      "description": "Remova todos os voos da empresa `GOL` em que a quantidade de passageiros pagos esteja entre `5` e `10`, incluindo os casos em que a quantidade é `5` e `10`. Informe a quantidade de documentos removidos",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio27",
+      "description": "Retorne a quantidade total de voos de natureza `Doméstica` que a empresa `PASSAREDO` possui, via uso de uma nova coleção chamada `resumoVoos`",
+      "bonus": false
+    },
+    {
+      "identifier": "desafio28",
+      "description": "Retorne a quantidade total de voos de natureza `Doméstica` que a empresa `LATAM AIRLINES BRASIL` possui, via uso de uma nova coleção chamada `resumoVoos`",
+      "bonus": false
+    }
+  ]
+}

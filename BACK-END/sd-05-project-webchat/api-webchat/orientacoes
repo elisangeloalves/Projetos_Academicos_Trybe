@@ -1,0 +1,10 @@
+resumo do vini
+https://github.com/tryber/sd-04-live-lectures/pull/67/files
+da turma 4
+
+o requisito 1 eh o resumo do link
+
+https://www.youtube.com/watch?v=-jXfKDYJJvo
+ae o video
+
+'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n'

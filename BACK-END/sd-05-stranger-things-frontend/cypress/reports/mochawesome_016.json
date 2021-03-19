@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-04T02:06:10.803Z",
+    "end": "2021-01-04T02:07:14.283Z",
+    "duration": 63480,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "2b874af9-6ebb-4544-b176-a3ff3619f915",
+      "title": "",
+      "fullFile": "cypress/integration/herokuDeploy.spec.js",
+      "file": "cypress/integration/herokuDeploy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a95d3203-13db-4dc1-8b3d-148dadbf14e6",
+          "title": "Verifica se foi feito o deploy do frontend no Heroku",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que o botão de mudar de realidade existe",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade existe",
+              "timedOut": null,
+              "duration": 60164,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".change-reality\").should(\"exist\");",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `/Users/preto/pasta_Trybe/PROJETOS_TRYBE/TRYBE-PROJETOS/BACK-END/sd-05-stranger-things-frontend/cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Verifica se foi feito o dep...`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `/Users/preto/pasta_Trybe/PROJETOS_TRYBE/TRYBE-PROJETOS/BACK-END/sd-05-stranger-things-frontend/cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Verifica se foi feito o dep...`\n    at timedOutWaitingForPageLoad (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158114:16\n    at tryCatcher (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://preto115-ft.herokuapp.com/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:107:8)",
+                "diff": null
+              },
+              "uuid": "500c52a9-48e5-444d-8256-6bfefc885ca7",
+              "parentUUID": "a95d3203-13db-4dc1-8b3d-148dadbf14e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a pesquisa funciona como deveria",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que a pesquisa funciona como deveria",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "5dd391fa-404a-4d6a-ab38-0033a7e46e46",
+              "parentUUID": "a95d3203-13db-4dc1-8b3d-148dadbf14e6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Será validado que o botão de mudar de realidade funciona.",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade funciona.",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Mudar de Realidade\").click();\ncy.contains(PESQUISAR).click();\ncy.contains(INVERTED_MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "7ffcc0ed-89e0-436a-a596-f30637b44dd5",
+              "parentUUID": "a95d3203-13db-4dc1-8b3d-148dadbf14e6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Será validado que os botões de próxima página e página anterior funcionam",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que os botões de próxima página e página anterior funcionam",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");\ncy.contains(\"Próximo\").click();\ncy.contains(\"2\").should(\"exist\");\ncy.contains(Claudia).should(\"exist\");\ncy.contains(\"Anterior\").click();\ncy.contains(\"1\").should(\"exist\");\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "18837cda-4722-4b3d-a6df-ba69e591a547",
+              "parentUUID": "a95d3203-13db-4dc1-8b3d-148dadbf14e6",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "500c52a9-48e5-444d-8256-6bfefc885ca7"
+          ],
+          "pending": [],
+          "skipped": [
+            "5dd391fa-404a-4d6a-ab38-0033a7e46e46",
+            "7ffcc0ed-89e0-436a-a596-f30637b44dd5",
+            "18837cda-4722-4b3d-a6df-ba69e591a547"
+          ],
+          "duration": 60164,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

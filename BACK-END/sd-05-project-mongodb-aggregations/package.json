@@ -1,0 +1,26 @@
+{
+  "name": "sd-0x-project-mongodb-aggregations",
+  "version": "1.0.0",
+  "description": "Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo e, se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betrybe/sd-0x-project-mongodb-aggregations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betrybe/sd-0x-project-mongodb-aggregations/issues"
+  },
+  "homepage": "https://github.com/betrybe/sd-0x-project-mongodb-aggregations#readme",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "typescript": "^4.0.5"
+  }
+}

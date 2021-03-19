@@ -1,0 +1,38 @@
+{
+  "name": "blogs-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.31",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.5.0",
+    "shelljs": "^0.8.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
+    "drop": "npx sequelize-cli db:drop $",
+    "seed": "npx sequelize-cli db:seed:all $",
+    "test": "jest --runInBand",
+    "test-coverage": "jest --runInBand --coverage",
+    "debug": "nodemon index.js",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "frisby": "^2.1.2",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^4.0.2"
+  }
+}

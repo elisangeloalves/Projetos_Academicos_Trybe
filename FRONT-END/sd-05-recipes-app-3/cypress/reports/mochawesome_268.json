@@ -1,0 +1,1083 @@
+{
+  "stats": {
+    "suites": 14,
+    "tests": 32,
+    "passes": 0,
+    "pending": 0,
+    "failures": 32,
+    "start": "2020-10-01T05:30:45.586Z",
+    "end": "2020-10-01T05:31:31.535Z",
+    "duration": 45949,
+    "testsRegistered": 32,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "90f441d4-b171-4b17-801e-5b3c48a61623",
+      "title": "",
+      "fullFile": "cypress/integration/recipe_detail_spec.js",
+      "file": "cypress/integration/recipe_detail_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "348a5056-c8a4-4596-972d-656560835593",
+          "title": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tela de comida possui todos os atributos data-testid",
+              "fullTitle": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita A tela de comida possui todos os atributos data-testid",
+              "timedOut": null,
+              "duration": 1608,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]');\ncy.get('[data-testid=\"recipe-title\"]');\ncy.get('[data-testid=\"share-btn\"]');\ncy.get('[data-testid=\"favorite-btn\"]');\ncy.get('[data-testid=\"recipe-category\"]');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]');\ncy.get('[data-testid=\"instructions\"]');\ncy.get('[data-testid=\"video\"]');\ncy.get('[data-testid=\"0-recomendation-card\"]');\ncy.get('[data-testid=\"start-recipe-btn\"]');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "d9ab7e5f-44d0-4aa0-90c0-ab5262cf3ab3",
+              "parentUUID": "348a5056-c8a4-4596-972d-656560835593",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A tela de bebidas possui todos os atributos data-testid",
+              "fullTitle": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de detalhes de uma receita A tela de bebidas possui todos os atributos data-testid",
+              "timedOut": null,
+              "duration": 909,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]');\ncy.get('[data-testid=\"recipe-title\"]');\ncy.get('[data-testid=\"share-btn\"]');\ncy.get('[data-testid=\"favorite-btn\"]');\ncy.get('[data-testid=\"recipe-category\"]');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]');\ncy.get('[data-testid=\"instructions\"]');\ncy.get('[data-testid=\"0-recomendation-card\"]');\ncy.get('[data-testid=\"start-recipe-btn\"]');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "9279c81a-6647-4398-be4d-17ba714cd9c8",
+              "parentUUID": "348a5056-c8a4-4596-972d-656560835593",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d9ab7e5f-44d0-4aa0-90c0-ab5262cf3ab3",
+            "9279c81a-6647-4398-be4d-17ba714cd9c8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2517,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "cf629030-3b5e-4f1c-9049-0a203b798ab2",
+          "title": "Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se a requisição para a API de comidas foi realizada",
+              "fullTitle": "Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL Verifica se a requisição para a API de comidas foi realizada",
+              "timedOut": null,
+              "duration": 1734,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    cy.spy(win, 'fetch');\n  }\n});\ncy.window().its('fetch').should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "c330a85b-0101-4f59-b6e9-8622e3e42dca",
+              "parentUUID": "cf629030-3b5e-4f1c-9049-0a203b798ab2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a requisição para a API de bebidas foi realizada",
+              "fullTitle": "Uma request para a API deve ser feita passando o `id` da receita que deve estar disponível nos parâmetros da URL Verifica se a requisição para a API de bebidas foi realizada",
+              "timedOut": null,
+              "duration": 2836,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    cy.spy(win, 'fetch');\n  }\n});\ncy.window().its('fetch').should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178319');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "6b5bc149-b921-4758-af3c-3dfb3a3e4475",
+              "parentUUID": "cf629030-3b5e-4f1c-9049-0a203b798ab2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c330a85b-0101-4f59-b6e9-8622e3e42dca",
+            "6b5bc149-b921-4758-af3c-3dfb3a3e4475"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4570,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c776cf35-2573-429d-88ab-323c8c134081",
+          "title": "Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube \"embedado\" e recomendações",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida",
+              "fullTitle": "Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube \"embedado\" e recomendações Verifica se os elementos descritos no protótipo existem na tela de detalhes de comida",
+              "timedOut": null,
+              "duration": 1366,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]').should('have.prop', 'tagName').should('eq', 'IMG');\ncy.get('[data-testid=\"recipe-title\"]').contains('Spicy Arrabiata Penne');\ncy.get('[data-testid=\"recipe-category\"]').contains('Vegetarian');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]').contains('penne rigate');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]').contains('1 pound');\ncy.get('[data-testid=\"1-ingredient-name-and-measure\"]').contains('olive oil');\ncy.get('[data-testid=\"1-ingredient-name-and-measure\"]').contains('1/4 cup');\ncy.get('[data-testid=\"2-ingredient-name-and-measure\"]').contains('garlic');\ncy.get('[data-testid=\"2-ingredient-name-and-measure\"]').contains('3 cloves');\ncy.get('[data-testid=\"3-ingredient-name-and-measure\"]').contains('chopped tomatoes');\ncy.get('[data-testid=\"3-ingredient-name-and-measure\"]').contains('1 tin');\ncy.get('[data-testid=\"4-ingredient-name-and-measure\"]').contains('red chile flakes');\ncy.get('[data-testid=\"4-ingredient-name-and-measure\"]').contains('1/2 teaspoon');\ncy.get('[data-testid=\"5-ingredient-name-and-measure\"]').contains('italian seasoning');\ncy.get('[data-testid=\"5-ingredient-name-and-measure\"]').contains('1/2 teaspoon');\ncy.get('[data-testid=\"6-ingredient-name-and-measure\"]').contains('basil');\ncy.get('[data-testid=\"6-ingredient-name-and-measure\"]').contains('6 leaves');\ncy.get('[data-testid=\"7-ingredient-name-and-measure\"]').contains('Parmigiano-Reggiano');\ncy.get('[data-testid=\"7-ingredient-name-and-measure\"]').contains('spinkling');\ncy.get('[data-testid=\"instructions\"]').contains('Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\\r\\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\\r\\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.');\ncy.get('[data-testid=\"video\"]').should('exist');\ncy.get('[data-testid*=\"recomendation-card\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "f814759f-ec91-4434-91e5-07af51b14fc5",
+              "parentUUID": "c776cf35-2573-429d-88ab-323c8c134081",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se os elementos descritos no protótipo existem na tela de detalhes de bebida",
+              "fullTitle": "Essa tela deve conter uma imagem da receita, o título, a categoria (ou se é ou não alcoólico), uma lista de ingredientes seguidos pelas quantidades, instruções, um vídeo do youtube \"embedado\" e recomendações Verifica se os elementos descritos no protótipo existem na tela de detalhes de bebida",
+              "timedOut": null,
+              "duration": 840,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"recipe-photo\"]').should('have.prop', 'tagName').should('eq', 'IMG');\ncy.get('[data-testid=\"recipe-title\"]').contains('Aquamarine');\ncy.get('[data-testid=\"recipe-category\"]').contains('Alcoholic');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]').contains('Hpnotiq');\ncy.get('[data-testid=\"0-ingredient-name-and-measure\"]').contains('2 oz');\ncy.get('[data-testid=\"1-ingredient-name-and-measure\"]').contains('Pineapple Juice');\ncy.get('[data-testid=\"1-ingredient-name-and-measure\"]').contains('1 oz');\ncy.get('[data-testid=\"2-ingredient-name-and-measure\"]').contains('Banana Liqueur');\ncy.get('[data-testid=\"2-ingredient-name-and-measure\"]').contains('1 oz');\ncy.get('[data-testid=\"instructions\"]').contains('Shake well in a shaker with ice.\\r\\nStrain in a martini glass.');\ncy.get('[data-testid*=\"recomendation-card\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a6dd664c-32da-4aec-aba4-3db05a03050c",
+              "parentUUID": "c776cf35-2573-429d-88ab-323c8c134081",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f814759f-ec91-4434-91e5-07af51b14fc5",
+            "a6dd664c-32da-4aec-aba4-3db05a03050c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "72a82d8d-3374-4091-84df-a0b0bbc017c0",
+          "title": "As recomendações para receitas de comida deverão ser bebidas e vice-versa",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se a requisição para a API de bebidas foi realizada",
+              "fullTitle": "As recomendações para receitas de comida deverão ser bebidas e vice-versa Verifica se a requisição para a API de bebidas foi realizada",
+              "timedOut": null,
+              "duration": 1091,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    cy.spy(win, 'fetch');\n  }\n});\ncy.window().its('fetch').should('be.calledWith', 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "f14368d8-42ff-431e-9461-e33c7ae46c8e",
+              "parentUUID": "72a82d8d-3374-4091-84df-a0b0bbc017c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a requisição para a API de comidas foi realizada",
+              "fullTitle": "As recomendações para receitas de comida deverão ser bebidas e vice-versa Verifica se a requisição para a API de comidas foi realizada",
+              "timedOut": null,
+              "duration": 2398,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    cy.spy(win, 'fetch');\n  }\n});\ncy.window().its('fetch').should('be.calledWith', 'https://www.themealdb.com/api/json/v1/1/search.php?s=');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a3de2995-cf75-417f-a393-090f6fc9f955",
+              "parentUUID": "72a82d8d-3374-4091-84df-a0b0bbc017c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f14368d8-42ff-431e-9461-e33c7ae46c8e",
+            "a3de2995-cf75-417f-a393-090f6fc9f955"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3489,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "17c28983-6ce1-409d-9798-11084375234a",
+          "title": "Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se exitem todas as recomendações na tela de detalhes de uma comida",
+              "fullTitle": "Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel` Verifica se exitem todas as recomendações na tela de detalhes de uma comida",
+              "timedOut": null,
+              "duration": 911,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"recomendation-card\"]').should('have.length', 6);\ncy.get('[data-testid=\"0-recomendation-card\"]').should('exist').and('visible');\ncy.get('[data-testid=\"0-recomendation-title\"]').contains('GG');\ncy.get('[data-testid=\"1-recomendation-card\"]').should('exist').and('visible');\ncy.get('[data-testid=\"1-recomendation-title\"]').contains('A1');\ncy.get('[data-testid=\"2-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"2-recomendation-title\"]').contains('ABC');\ncy.get('[data-testid=\"3-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"3-recomendation-title\"]').contains('Kir');\ncy.get('[data-testid=\"4-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"4-recomendation-title\"]').contains('747');\ncy.get('[data-testid=\"5-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"5-recomendation-title\"]').contains('252');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "f3989f67-b333-49df-a8a3-56a223294e70",
+              "parentUUID": "17c28983-6ce1-409d-9798-11084375234a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se exitem todas as recomendações na tela de detalhes de uma bebida",
+              "fullTitle": "Deverão ser mostrados 6 cards de recomendação, onde apenas 2 são mostrados e o scroll é horizontal, similar a um `carousel` Verifica se exitem todas as recomendações na tela de detalhes de uma bebida",
+              "timedOut": null,
+              "duration": 838,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid*=\"recomendation-card\"]').should('have.length', 6);\ncy.get('[data-testid=\"0-recomendation-card\"]').should('exist').and('visible');\ncy.get('[data-testid=\"0-recomendation-title\"]').contains('Corba');\ncy.get('[data-testid=\"1-recomendation-card\"]').should('exist').and('visible');\ncy.get('[data-testid=\"1-recomendation-title\"]').contains('Kumpir');\ncy.get('[data-testid=\"2-recomendation-card\"]').should('exist');\ncy.get('[data-testid=\"2-recomendation-title\"]').contains('Dal fry');\ncy.get('[data-testid=\"3-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"3-recomendation-title\"]').contains('Poutine');\ncy.get('[data-testid=\"4-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"4-recomendation-title\"]').contains('Lasagne');\ncy.get('[data-testid=\"5-recomendation-card\"]').should('exist').and('not.visible');\ncy.get('[data-testid=\"5-recomendation-title\"]').contains('Timbits');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "e34605a3-ec42-4040-8a6e-f441f1ba4de8",
+              "parentUUID": "17c28983-6ce1-409d-9798-11084375234a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3989f67-b333-49df-a8a3-56a223294e70",
+            "e34605a3-ec42-4040-8a6e-f441f1ba4de8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1749,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "14ea8e06-052b-4152-9b95-081b109fb795",
+          "title": "Um botão de nome \"Iniciar Receita\" deve ficar fixo na parte de baixo da tela o tempo todo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica posicionamento do botão na tela de detalhes de comida",
+              "fullTitle": "Um botão de nome \"Iniciar Receita\" deve ficar fixo na parte de baixo da tela o tempo todo Verifica posicionamento do botão na tela de detalhes de comida",
+              "timedOut": null,
+              "duration": 933,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').should('have.css', 'position', 'fixed').and('have.css', 'bottom', '0px');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "bc889524-f4c9-45f7-96d3-8cf3926c7d18",
+              "parentUUID": "14ea8e06-052b-4152-9b95-081b109fb795",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica posicionamento do botão na tela de detalhes de bebida",
+              "fullTitle": "Um botão de nome \"Iniciar Receita\" deve ficar fixo na parte de baixo da tela o tempo todo Verifica posicionamento do botão na tela de detalhes de bebida",
+              "timedOut": null,
+              "duration": 863,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').should('have.css', 'position', 'fixed').and('have.css', 'bottom', '0px');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "5e1ae78f-b5f7-41ba-b877-c59a9fa125d0",
+              "parentUUID": "14ea8e06-052b-4152-9b95-081b109fb795",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bc889524-f4c9-45f7-96d3-8cf3926c7d18",
+            "5e1ae78f-b5f7-41ba-b877-c59a9fa125d0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1796,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d6693ef8-ed47-4259-9771-90b00cd98c93",
+          "title": "Caso a receita já tenha sido feita, o botão \"Iniciar Receita\" deve sumir",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida",
+              "fullTitle": "Caso a receita já tenha sido feita, o botão \"Iniciar Receita\" deve sumir Verifica se botão de iniciar receita não é visível na tela de detalhes de uma comida",
+              "timedOut": null,
+              "duration": 851,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var doneRecipes = [{\n      \"id\": \"52771\",\n      \"type\": \"comida\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"alcoholicOrNot\": \"\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\",\n      \"doneDate\": \"22/6/2020\",\n      \"tags\": [\"Pasta\", \"Curry\"]\n    }];\n    localStorage.setItem('doneRecipes', JSON.stringify(doneRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').should('not.be.visible');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "44490353-7f4c-44da-a64e-6d3efca7ac73",
+              "parentUUID": "d6693ef8-ed47-4259-9771-90b00cd98c93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se botão de iniciar receita não é visível na tela de detalhes de uma bebida",
+              "fullTitle": "Caso a receita já tenha sido feita, o botão \"Iniciar Receita\" deve sumir Verifica se botão de iniciar receita não é visível na tela de detalhes de uma bebida",
+              "timedOut": null,
+              "duration": 851,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var doneRecipes = [{\n      \"id\": \"178319\",\n      \"type\": \"bebida\",\n      \"area\": \"\",\n      \"category\": \"Cocktail\",\n      \"alcoholicOrNot\": \"Alcoholic\",\n      \"name\": \"Aquamarine\",\n      \"image\": \"https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg\",\n      \"doneDate\": \"23/6/2020\",\n      \"tags\": []\n    }];\n    localStorage.setItem('doneRecipes', JSON.stringify(doneRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').should('not.be.visible');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "e3d39704-58df-4100-970d-78402fe7d03e",
+              "parentUUID": "d6693ef8-ed47-4259-9771-90b00cd98c93",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "44490353-7f4c-44da-a64e-6d3efca7ac73",
+            "e3d39704-58df-4100-970d-78402fe7d03e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1702,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9c73e2e2-3801-439b-b406-ce7f43eaab88",
+          "title": "Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser \"Continuar Receita\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica botão de \"Continuar Receita\" na tela de detalhes de uma comida",
+              "fullTitle": "Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser \"Continuar Receita\" Verifica botão de \"Continuar Receita\" na tela de detalhes de uma comida",
+              "timedOut": null,
+              "duration": 899,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var inProgressRecipes = {\n      meals: {\n        52771: []\n      }\n    };\n    localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').contains('Continuar Receita');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "0b09658d-cc1c-4698-8fc8-b78fffbd8978",
+              "parentUUID": "9c73e2e2-3801-439b-b406-ce7f43eaab88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica botão de \"Continuar Receita\" na tela de detalhes de uma bebida",
+              "fullTitle": "Caso a receita tenha sido iniciada mas não finalizada, o texto do botão deve ser \"Continuar Receita\" Verifica botão de \"Continuar Receita\" na tela de detalhes de uma bebida",
+              "timedOut": null,
+              "duration": 1085,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var inProgressRecipes = {\n      cocktails: {\n        178319: []\n      }\n    };\n    localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').contains('Continuar Receita');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "ef1376f0-d257-4a87-8a85-6c83df1f7a6d",
+              "parentUUID": "9c73e2e2-3801-439b-b406-ce7f43eaab88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0b09658d-cc1c-4698-8fc8-b78fffbd8978",
+            "ef1376f0-d257-4a87-8a85-6c83df1f7a6d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1984,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9de5d338-dada-4691-ba54-de8ca4c850f9",
+          "title": "Quando o botão \"Iniciar Receita\" for clicado, a rota deve mudar para a tela de receita em processo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Redireciona para tela de receita da comida em processo",
+              "fullTitle": "Quando o botão \"Iniciar Receita\" for clicado, a rota deve mudar para a tela de receita em processo Redireciona para tela de receita da comida em processo",
+              "timedOut": null,
+              "duration": 979,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771/in-progress');\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "2e9ec55a-7aaf-4ec0-bece-9b958b4d4794",
+              "parentUUID": "9de5d338-dada-4691-ba54-de8ca4c850f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Redireciona para tela de receita da bebida em processo",
+              "fullTitle": "Quando o botão \"Iniciar Receita\" for clicado, a rota deve mudar para a tela de receita em processo Redireciona para tela de receita da bebida em processo",
+              "timedOut": null,
+              "duration": 885,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"start-recipe-btn\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319/in-progress');\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "e83635a0-453c-4bbe-8ea4-6a8dc3e149b2",
+              "parentUUID": "9de5d338-dada-4691-ba54-de8ca4c850f9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2e9ec55a-7aaf-4ec0-bece-9b958b4d4794",
+            "e83635a0-453c-4bbe-8ea4-6a8dc3e149b2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1864,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f7aa7c40-9878-46f3-80e1-e8f3b429b999",
+          "title": "Um botão de compartilhar e um de favoritar a receita devem estar disponíveis",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se os botões estão disponíveis na tela de detalhes de uma comida",
+              "fullTitle": "Um botão de compartilhar e um de favoritar a receita devem estar disponíveis Verifica se os botões estão disponíveis na tela de detalhes de uma comida",
+              "timedOut": null,
+              "duration": 976,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').should('exist');\ncy.get('[data-testid=\"favorite-btn\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "e719a70e-ddba-4a2c-ad5f-772c3b06b8da",
+              "parentUUID": "f7aa7c40-9878-46f3-80e1-e8f3b429b999",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se os botões estão disponíveis na tela de detalhes de uma bebida",
+              "fullTitle": "Um botão de compartilhar e um de favoritar a receita devem estar disponíveis Verifica se os botões estão disponíveis na tela de detalhes de uma bebida",
+              "timedOut": null,
+              "duration": 935,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').should('exist');\ncy.get('[data-testid=\"favorite-btn\"]').should('exist');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "578646e5-7d21-43ba-9683-ce68db3441d6",
+              "parentUUID": "f7aa7c40-9878-46f3-80e1-e8f3b429b999",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e719a70e-ddba-4a2c-ad5f-772c3b06b8da",
+            "578646e5-7d21-43ba-9683-ce68db3441d6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1911,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e5b370a5-1de3-4c33-9fbc-0779fb4b96dc",
+          "title": "Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica a mensagem \"Link copiado!\" e se o link da receita da comida foi copiado para o clipboard",
+              "fullTitle": "Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer Verifica a mensagem \"Link copiado!\" e se o link da receita da comida foi copiado para o clipboard",
+              "timedOut": null,
+              "duration": 1055,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').click();\ncy.contains('Link copiado!');\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "86789a26-bd8e-4c91-ae46-262217d0545c",
+              "parentUUID": "e5b370a5-1de3-4c33-9fbc-0779fb4b96dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica a mensagem \"Link copiado!\" e se o link da receita da bebida foi copiado para o clipboard",
+              "fullTitle": "Ao clicar no botão de compartilhar, o link da receita dentro do app deve ser copiado para o clipboard e uma mensagem avisando que o link foi copiado deve aparecer Verifica a mensagem \"Link copiado!\" e se o link da receita da bebida foi copiado para o clipboard",
+              "timedOut": null,
+              "duration": 824,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"share-btn\"]').click();\ncy.contains('Link copiado!');\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/bebidas/178319');\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "b760d649-6479-4b22-a756-a9e22fd80e11",
+              "parentUUID": "e5b370a5-1de3-4c33-9fbc-0779fb4b96dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "86789a26-bd8e-4c91-ae46-262217d0545c",
+            "b760d649-6479-4b22-a756-a9e22fd80e11"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1879,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2cf07ef0-b3de-4f47-a553-6e08ae40d0a6",
+          "title": "O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e \"despreenchido\" caso contrário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se a comida favoritada vem com o coração preenchido",
+              "fullTitle": "O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e \"despreenchido\" caso contrário Verifica se a comida favoritada vem com o coração preenchido",
+              "timedOut": null,
+              "duration": 942,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"52771\",\n      \"type\": \"comida\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"alcoholicOrNot\": \"\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "73d0b5fd-66ac-4754-bd72-94221642d71c",
+              "parentUUID": "2cf07ef0-b3de-4f47-a553-6e08ae40d0a6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a comida não favoritada vem com o coração \"despreenchido\"",
+              "fullTitle": "O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e \"despreenchido\" caso contrário Verifica se a comida não favoritada vem com o coração \"despreenchido\"",
+              "timedOut": null,
+              "duration": 949,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a910c019-004c-48d4-837e-f2f4297d82d9",
+              "parentUUID": "2cf07ef0-b3de-4f47-a553-6e08ae40d0a6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a bebida favoritada vem com o coração preenchido",
+              "fullTitle": "O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e \"despreenchido\" caso contrário Verifica se a bebida favoritada vem com o coração preenchido",
+              "timedOut": null,
+              "duration": 994,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"178319\",\n      \"type\": \"bebida\",\n      \"area\": \"\",\n      \"category\": \"Cocktail\",\n      \"alcoholicOrNot\": \"Alcoholic\",\n      \"name\": \"Aquamarine\",\n      \"image\": \"https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a97879dd-996e-49a3-9429-3692912c5558",
+              "parentUUID": "2cf07ef0-b3de-4f47-a553-6e08ae40d0a6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a bebida não favoritada vem com o coração \"despreenchido\"",
+              "fullTitle": "O ícone do coração (favorito) deve vir preenchido caso a receita esteja favoritada, e \"despreenchido\" caso contrário Verifica se a bebida não favoritada vem com o coração \"despreenchido\"",
+              "timedOut": null,
+              "duration": 916,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "6fa12569-5ca8-49a1-a3da-22ef6d449823",
+              "parentUUID": "2cf07ef0-b3de-4f47-a553-6e08ae40d0a6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "73d0b5fd-66ac-4754-bd72-94221642d71c",
+            "a910c019-004c-48d4-837e-f2f4297d82d9",
+            "a97879dd-996e-49a3-9429-3692912c5558",
+            "6fa12569-5ca8-49a1-a3da-22ef6d449823"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ae6285a3-920a-453d-bb02-dd5981b6c6ff",
+          "title": "Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para \"despreenchido\" e vice-versa",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Favorita a comida",
+              "fullTitle": "Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para \"despreenchido\" e vice-versa Favorita a comida",
+              "timedOut": null,
+              "duration": 978,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "f6aed313-fb4b-47b2-91b6-deb6714d6f0a",
+              "parentUUID": "ae6285a3-920a-453d-bb02-dd5981b6c6ff",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Desfavorita a comida",
+              "fullTitle": "Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para \"despreenchido\" e vice-versa Desfavorita a comida",
+              "timedOut": null,
+              "duration": 937,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"52771\",\n      \"type\": \"comida\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"image\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a6970e2c-c17a-496c-a252-deef1683539d",
+              "parentUUID": "ae6285a3-920a-453d-bb02-dd5981b6c6ff",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Favorita a bebida",
+              "fullTitle": "Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para \"despreenchido\" e vice-versa Favorita a bebida",
+              "timedOut": null,
+              "duration": 917,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "4ab01d02-6c5b-4aa5-9065-7f683ea17c19",
+              "parentUUID": "ae6285a3-920a-453d-bb02-dd5981b6c6ff",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Desfavorita a bebida",
+              "fullTitle": "Ao clicar no botão de favoritar, o ícone do coração deve mudar de seu estado atual, caso esteja preenchido deve mudar para \"despreenchido\" e vice-versa Desfavorita a bebida",
+              "timedOut": null,
+              "duration": 1029,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    var favoriteRecipes = [{\n      \"id\": \"178319\",\n      \"type\": \"bebida\",\n      \"category\": \"Cocktail\",\n      \"alcoholicOrNot\": \"Alcoholic\",\n      \"name\": \"Aquamarine\",\n      \"image\": \"https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg\"\n    }];\n    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');\ncy.get('[data-testid=\"favorite-btn\"]').click();\ncy.get('[data-testid=\"favorite-btn\"]').should('have.attr', 'src').should('include', 'whiteHeartIcon');",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "a339dc90-52a7-4c75-9c8f-3886d0ff9625",
+              "parentUUID": "ae6285a3-920a-453d-bb02-dd5981b6c6ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f6aed313-fb4b-47b2-91b6-deb6714d6f0a",
+            "a6970e2c-c17a-496c-a252-deef1683539d",
+            "4ab01d02-6c5b-4aa5-9065-7f683ea17c19",
+            "a339dc90-52a7-4c75-9c8f-3886d0ff9625"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3861,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a353ff4e-f005-498b-9c24-4b69f1d66f89",
+          "title": "As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage",
+              "fullTitle": "As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` Verifica se após favoritar receita de uma comida, ela é salva corretamente no localStorage",
+              "timedOut": null,
+              "duration": 1046,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/comidas/52771', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').click().then(function () {\n  var favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));\n  var expectedFavoriteRecipes = [{\n    id: '52771',\n    type: 'comida',\n    area: 'Italian',\n    category: 'Vegetarian',\n    alcoholicOrNot: '',\n    name: 'Spicy Arrabiata Penne',\n    image: 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg'\n  }];\n  expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'meals' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2966:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "c566dfb5-d441-4ed8-af57-d2f431729197",
+              "parentUUID": "a353ff4e-f005-498b-9c24-4b69f1d66f89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage",
+              "fullTitle": "As receitas favoritas devem ser salvas em `localStorage` na chave `favoriteRecipes` Verifica se após favoritar receita de uma bebida, ela é salva corretamente no localStorage",
+              "timedOut": null,
+              "duration": 890,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/bebidas/178319', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"favorite-btn\"]').click().then(function () {\n  var favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));\n  var expectedFavoriteRecipes = [{\n    id: '178319',\n    type: 'bebida',\n    area: '',\n    category: 'Cocktail',\n    alcoholicOrNot: 'Alcoholic',\n    name: 'Aquamarine',\n    image: 'https://www.thecocktaildb.com/images/media/drink/zvsre31572902738.jpg'\n  }];\n  expect(favoriteRecipes).to.deep.eq(expectedFavoriteRecipes);\n});",
+              "err": {
+                "message": "Uncaught Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'cocktails' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at loadStorage (http://localhost:3000/static/js/main.chunk.js:2975:36)\n    at StartRecipe.checkStatus (http://localhost:3000/static/js/main.chunk.js:2995:17)\n    at StartRecipe.componentDidMount (http://localhost:3000/static/js/main.chunk.js:3009:10)\n    at commitLifeCycles (http://localhost:3000/static/js/1.chunk.js:26217:26)\n    at commitLayoutEffects (http://localhost:3000/static/js/1.chunk.js:29189:11)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:6719:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:6768:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:6821:35)\n    at commitRootImpl (http://localhost:3000/static/js/1.chunk.js:28931:13)\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:37779:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:17606:14)\n    at commitRoot (http://localhost:3000/static/js/1.chunk.js:28773:7)\n    at finishSyncRender (http://localhost:3000/static/js/1.chunk.js:28190:7)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:28176:11)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:27572:11)\n    at updateContainer (http://localhost:3000/static/js/1.chunk.js:30721:7)\n    at http://localhost:3000/static/js/1.chunk.js:31104:11\n    at unbatchedUpdates (http://localhost:3000/static/js/1.chunk.js:28290:16)\n    at legacyRenderSubtreeIntoContainer (http://localhost:3000/static/js/1.chunk.js:31103:9)\n    at Object.render (http://localhost:3000/static/js/1.chunk.js:31186:14)\n    at Module../src/index.js (http://localhost:3000/static/js/main.chunk.js:4123:50)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at fn (http://localhost:3000/static/js/bundle.js:151:20)\n    at Object.1 (http://localhost:3000/static/js/main.chunk.js:6900:18)\n    at __webpack_require__ (http://localhost:3000/static/js/bundle.js:785:30)\n    at checkDeferredModules (http://localhost:3000/static/js/bundle.js:46:23)\n    at Array.webpackJsonpCallback [as push] (http://localhost:3000/static/js/bundle.js:33:19)\n    at http://localhost:3000/static/js/main.chunk.js:1:85",
+                "diff": null
+              },
+              "uuid": "e26c9104-10b7-4dd8-92cf-9b37656af76f",
+              "parentUUID": "a353ff4e-f005-498b-9c24-4b69f1d66f89",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c566dfb5-d441-4ed8-af57-d2f431729197",
+            "e26c9104-10b7-4dd8-92cf-9b37656af76f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1936,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 12,
+    "passes": 4,
+    "pending": 0,
+    "failures": 8,
+    "start": "2020-09-23T01:21:05.984Z",
+    "end": "2020-09-23T01:22:40.051Z",
+    "duration": 94067,
+    "testsRegistered": 12,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9c180b4f-a2a2-4178-9268-3886d0f13f31",
+      "title": "",
+      "fullFile": "cypress/integration/favorite_recipes_spec.js",
+      "file": "cypress/integration/favorite_recipes_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a4b5c2f-e7c3-42d8-99c7-25fe6ff3dc4d",
+          "title": "Favorite recipes screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "cd5532da-47ab-4862-a64c-3c3f4706479d",
+              "title": "Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Todos os data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis",
+                  "fullTitle": "Favorite recipes screen Todos os elementos devem respeitar os atributos descritos no protótipo para a tela de receitas favoritas Todos os data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis",
+                  "timedOut": null,
+                  "duration": 13109,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-all-btn\"]');\ncy.get('[data-testid=\"filter-by-food-btn\"]');\ncy.get('[data-testid=\"filter-by-drink-btn\"]');\ncy.get('[data-testid=\"0-horizontal-image\"]');\ncy.get('[data-testid=\"0-horizontal-top-text\"]');\ncy.get('[data-testid=\"0-horizontal-name\"]');\ncy.get('[data-testid=\"0-horizontal-share-btn\"]');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]');\ncy.get('[data-testid=\"1-horizontal-image\"]');\ncy.get('[data-testid=\"1-horizontal-top-text\"]');\ncy.get('[data-testid=\"1-horizontal-name\"]');\ncy.get('[data-testid=\"1-horizontal-share-btn\"]');\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "90bb480b-2836-4b7c-b4f0-15bb78da6a42",
+                  "parentUUID": "cd5532da-47ab-4862-a64c-3c3f4706479d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "90bb480b-2836-4b7c-b4f0-15bb78da6a42"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 13109,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c544b671-5d10-4679-9085-3c19783319d9",
+              "title": "Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de \"desfavoritar\"",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma comida",
+                  "fullTitle": "Favorite recipes screen Caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de \"desfavoritar\" O card possui os atributos corretos de uma comida",
+                  "timedOut": null,
+                  "duration": 10961,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').should('have.attr', 'src').should('include', favoriteRecipes[0].image);\ncy.get('[data-testid=\"0-horizontal-top-text\"]').contains(\"\".concat(favoriteRecipes[0].area, \" - \").concat(favoriteRecipes[0].category));\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"0-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "651d306a-6739-402e-a8b6-e060a227d009",
+                  "parentUUID": "c544b671-5d10-4679-9085-3c19783319d9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "651d306a-6739-402e-a8b6-e060a227d009"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10961,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "129a54bb-2aa4-4c06-9e4c-ad8ff32586b6",
+              "title": "Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de \"desfavoritar\"",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma bebida",
+                  "fullTitle": "Favorite recipes screen Caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de \"desfavoritar\" O card possui os atributos corretos de uma bebida",
+                  "timedOut": null,
+                  "duration": 10910,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-image\"]').should('have.attr', 'src').should('include', favoriteRecipes[1].image);\ncy.get('[data-testid=\"1-horizontal-top-text\"]').contains(favoriteRecipes[1].alcoholicOrNot);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"1-horizontal-share-btn\"]', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"1-horizontal-share-btn\"]', but never found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "9b1325da-4345-4699-99c8-b5a37a68697f",
+                  "parentUUID": "129a54bb-2aa4-4c06-9e4c-ad8ff32586b6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "9b1325da-4345-4699-99c8-b5a37a68697f"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10910,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "19395b74-67f4-44c3-974a-01bc9efb7438",
+              "title": "O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "fullTitle": "Favorite recipes screen O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "timedOut": null,
+                  "duration": 10866,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.contains('Link copiado!');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "f293034b-fa20-4cb5-905c-5fdfe8337d22",
+                  "parentUUID": "19395b74-67f4-44c3-974a-01bc9efb7438",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "fullTitle": "Favorite recipes screen O botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "timedOut": null,
+                  "duration": 10832,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '[data-testid=\"0-horizontal-share-btn\"]', but never found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "5bd126bb-38a7-4128-9988-8fbfb5ce81fa",
+                  "parentUUID": "19395b74-67f4-44c3-974a-01bc9efb7438",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "f293034b-fa20-4cb5-905c-5fdfe8337d22",
+                "5bd126bb-38a7-4128-9988-8fbfb5ce81fa"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 21698,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "7bb605cf-6c58-4a45-94ce-050247cb9d19",
+              "title": "O botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do localStorage e da tela",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida da tela",
+                  "fullTitle": "Favorite recipes screen O botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do localStorage e da tela Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida da tela",
+                  "timedOut": null,
+                  "duration": 669,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').should('not.exist');\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "b804fe7e-726b-4373-861b-5f7832a5ee7f",
+                  "parentUUID": "7bb605cf-6c58-4a45-94ce-050247cb9d19",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida do localStorage",
+                  "fullTitle": "Favorite recipes screen O botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do localStorage e da tela Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida do localStorage",
+                  "timedOut": null,
+                  "duration": 486,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq(favoriteRecipes);\n});\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').click();\ncy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq([favoriteRecipes[0]]);\n});\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').click();\ncy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq([]);\n});",
+                  "err": {},
+                  "uuid": "fab8401f-b5aa-478a-bb11-cbc2d067824d",
+                  "parentUUID": "7bb605cf-6c58-4a45-94ce-050247cb9d19",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b804fe7e-726b-4373-861b-5f7832a5ee7f",
+                "fab8401f-b5aa-478a-bb11-cbc2d067824d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1155,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ca7e4129-40d8-472d-a7aa-606c89eec74a",
+              "title": "Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "fullTitle": "Favorite recipes screen Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "timedOut": null,
+                  "duration": 10833,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"comidas\" data-testid=\"filter-by-food-btn\">Food</button>\n\nis being covered by another element:\n\n<div id=\"Spicy Arrabiata Penne\" class=\"card-body\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"comidas\" data-testid=\"filter-by-food-btn\">Food</button>\n\nis being covered by another element:\n\n<div id=\"Spicy Arrabiata Penne\" class=\"card-body\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at Object.retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:65238:19)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:117478:29)\n    at tryFn (http://localhost:3000/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:76892:16\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118320:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:118265:18)",
+                    "diff": null
+                  },
+                  "uuid": "a42834d1-d795-42af-a41e-a520c60e57b0",
+                  "parentUUID": "ca7e4129-40d8-472d-a7aa-606c89eec74a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "fullTitle": "Favorite recipes screen Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "timedOut": null,
+                  "duration": 10882,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-drink-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"bebidas\" data-testid=\"filter-by-drink-btn\">Drink</button>\n\nis being covered by another element:\n\n<img data-testid=\"0-horizontal-image\" src=\"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\" alt=\"Spicy Arrabiata Penne\">\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"bebidas\" data-testid=\"filter-by-drink-btn\">Drink</button>\n\nis being covered by another element:\n\n<img data-testid=\"0-horizontal-image\" src=\"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\" alt=\"Spicy Arrabiata Penne\">\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at Object.retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:65238:19)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:117478:29)\n    at tryFn (http://localhost:3000/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:76892:16\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118320:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:118265:18)",
+                    "diff": null
+                  },
+                  "uuid": "fa35aaa2-6b65-4446-bf83-0f1353013fbf",
+                  "parentUUID": "ca7e4129-40d8-472d-a7aa-606c89eec74a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "fullTitle": "Favorite recipes screen Devem existir 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "timedOut": null,
+                  "duration": 10879,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"filter-by-all-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"comidas\" data-testid=\"filter-by-food-btn\">Food</button>\n\nis being covered by another element:\n\n<div id=\"Spicy Arrabiata Penne\" class=\"card-body\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button type=\"button\" value=\"comidas\" data-testid=\"filter-by-food-btn\">Food</button>\n\nis being covered by another element:\n\n<div id=\"Spicy Arrabiata Penne\" class=\"card-body\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at Object.retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:65238:19)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Function.Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:117478:29)\n    at tryFn (http://localhost:3000/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:76892:16\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118320:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:118265:18)",
+                    "diff": null
+                  },
+                  "uuid": "3c685d97-7485-4f0a-9aef-6fc527e26c02",
+                  "parentUUID": "ca7e4129-40d8-472d-a7aa-606c89eec74a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "a42834d1-d795-42af-a41e-a520c60e57b0",
+                "fa35aaa2-6b65-4446-bf83-0f1353013fbf",
+                "3c685d97-7485-4f0a-9aef-6fc527e26c02"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 32594,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2311afe3-3136-49f1-8391-71cd32114997",
+              "title": "Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Favorite recipes screen Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 546,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+                  "err": {},
+                  "uuid": "b5369727-ab24-4655-99db-d8dd169ae936",
+                  "parentUUID": "2311afe3-3136-49f1-8391-71cd32114997",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Favorite recipes screen Ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 457,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-name\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+                  "err": {},
+                  "uuid": "a480313b-76ab-40cf-bea4-185ec1d06dbf",
+                  "parentUUID": "2311afe3-3136-49f1-8391-71cd32114997",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b5369727-ab24-4655-99db-d8dd169ae936",
+                "a480313b-76ab-40cf-bea4-185ec1d06dbf"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1003,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

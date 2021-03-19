@@ -1,0 +1,28 @@
+{
+  "requirements": [
+    {
+      "description": "Verifica o Deploy no Heroku",
+      "bonus": false
+    },
+    {
+      "description": "Verifica a configuração do ecosystem.config.yml",
+      "bonus": false
+    },
+    {
+      "description": "Verifica se os scripts do package.json estão corretos",
+      "bonus": false
+    },
+    {
+      "description": "Verifica se o modulo pm2 foi instalado no projeto",
+      "bonus": false
+    },
+    {
+      "description": "Verifica se a configuração do arquivo Procfile.",
+      "bonus": false
+    },
+    {
+      "description": "Verifica as variáveis de ambiente",
+      "bonus": false
+    }
+  ]
+}

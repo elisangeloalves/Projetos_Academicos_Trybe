@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-01-04T02:05:01.848Z",
+    "end": "2021-01-04T02:06:07.624Z",
+    "duration": 65776,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "352cc892-babe-4056-9ce9-c05484f2dd7b",
+      "title": "",
+      "fullFile": "cypress/integration/developerMode.spec.js",
+      "file": "cypress/integration/developerMode.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd95e353-90b2-4a7f-a407-110b9f3d342d",
+          "title": "Verifica os multi-ambientes e modo de desenvolvimento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "fullTitle": "Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento foi encontrada no frontend de desenvolvimento",
+              "timedOut": null,
+              "duration": 60177,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL);\ncy.contains(\"Em desenvolvimento\").should(\"exist\");",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `/Users/preto/pasta_Trybe/PROJETOS_TRYBE/TRYBE-PROJETOS/BACK-END/sd-05-stranger-things-frontend/cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `/Users/preto/pasta_Trybe/PROJETOS_TRYBE/TRYBE-PROJETOS/BACK-END/sd-05-stranger-things-frontend/cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158114:16\n    at tryCatcher (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://preto115-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:104:8)",
+                "diff": null
+              },
+              "uuid": "f06825b5-41e0-42cc-9be8-264aa8fac430",
+              "parentUUID": "bd95e353-90b2-4a7f-a407-110b9f3d342d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "fullTitle": "Verifica os multi-ambientes e modo de desenvolvimento Será validado que a tag de desenvolvimento não existe no frontend de produção",
+              "timedOut": null,
+              "duration": 971,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(FRONT_URL_PROD);\ncy.contains(\"Em desenvolvimento\").should(\"not.exist\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://preto115-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://preto115-pd.herokuapp.com/.\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158062:25\n    at visitFailedByErr (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:157432:12)\n    at https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:158042:13\n    at tryCatcher (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://preto115-ft.herokuapp.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://preto115-ft.herokuapp.com/__cypress/tests?p=cypress/integration/developerMode.spec.js:108:8)",
+                "diff": null
+              },
+              "uuid": "9b4c1866-6264-473d-86ec-837c57f33d52",
+              "parentUUID": "bd95e353-90b2-4a7f-a407-110b9f3d342d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f06825b5-41e0-42cc-9be8-264aa8fac430",
+            "9b4c1866-6264-473d-86ec-837c57f33d52"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61148,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

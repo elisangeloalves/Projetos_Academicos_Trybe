@@ -1,0 +1,16 @@
+{
+  "requirements": [
+    {
+      "description": "Verifica se foi feito o deploy do frontend no Heroku",
+      "bonus": false
+    },
+    {
+      "description": "Verifica as variáveis de ambiente do frontend",
+      "bonus": false
+    },
+    {
+      "description": "Verifica os multi-ambientes e modo de desenvolvimento",
+      "bonus": true
+    }
+  ]
+}
