@@ -1,0 +1,35 @@
+.searchbar {
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  display: flex;
+  overflow: hidden;
+  width: 66rem;
+}
+
+.searchbar input {
+  border-right: 1px solid #ccc;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 0.5rem 0.9rem;
+  width: 90%;
+}
+
+.searchbar input::placeholder {
+  font-size: 1.5rem;
+}
+
+.searchbar .search-btn {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+
+.searchbar .search-icon {
+  color: #888;
+  font-size: 2rem;
+  text-decoration: none;
+}

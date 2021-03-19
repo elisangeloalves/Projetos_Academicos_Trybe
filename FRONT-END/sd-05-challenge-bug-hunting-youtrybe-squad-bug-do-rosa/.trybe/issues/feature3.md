@@ -1,0 +1,1 @@
+A página de busca não deve renderizar canais de youtube, apenas videos. Porém parece que toda busca retorna um canal o que causa um erro ao renderizar na tela.

@@ -1,0 +1,21 @@
+{
+  "requirements": [{
+    "description": "Fazer uma requisição para o endpoint `/planets` da API de Star Wars e preencher uma tabela com os dados retornados, com exceção dos da coluna `residents`",
+    "bonus": false
+  }, {
+    "description": "Sua página deve ter um campo de texto que filtra a tabela para somente exibir planetas cujos nomes incluam o texto digitado",
+    "bonus": false
+  }, {
+    "description": "Sua página deve ter um filtro para valores numéricos",
+    "bonus": false
+  }, {
+    "description": "Sua página não deve utilizar filtros repetidos",
+    "bonus": false
+  }, {
+    "description": "Cada filtro de valores numéricos deve ter um ícone de `X` que, ao ser clicado, o apaga e desfaz suas filtragens dos dados da tabela",
+    "bonus": false
+  }, {
+    "description": "As colunas da tabela devem ser ordenáveis de forma ascendente ou descendente",
+    "bonus": true
+  }]
+}

@@ -1,40 +1,28 @@
 const items = document.querySelector('.items');
-items.appendChild(createCustomElement('span', 'loading', 'LOADING...'));
-
-const botaoExcluirProdutos = document.querySelector('.empty-cart');
+const botaocarregaProdutoss = document.querySelector('.empty-cart');
 const totalPrice = document.querySelector('.total-price');
-// let soma = 0;
-// let subtracao = 0;
-let total = 0;
-
-const soma = (valor) => {
-  if (!valor) total = 0;
-  else if (typeof valor === 'string') total -= Number(valor);
-  else { total += valor; }
-  totalPrice.innerText = `${total.toFixed(2)}`;
-  if (total == 0) totalPrice.innerText = '';
-  return total
-}
+let soma = 0;
+let subtracao = 0;
 
 const salvaCarrinho = () => {
   const carrinhoSalvo = document.getElementsByTagName('ol')[0].innerHTML;
   localStorage.setItem('carrinho', carrinhoSalvo);
 };
-/*
 const somaPrice = () => {
   const total = (soma - subtracao);
   totalPrice.innerText = `${total}`;
   if (total === 0) totalPrice.innerText = '';
   return total;
 };
-*/
+
 const limparCarrinho = () => {
   document.getElementsByTagName('ol')[0].innerHTML = '';
   localStorage.setItem('carrinho', '');
-   soma();
+  soma = 0;
+  somaPrice();
 };
 
-botaoExcluirProdutos.addEventListener('click', limparCarrinho);
+botaocarregaProdutoss.addEventListener('click', limparCarrinho);
 
 function createProductImageElement(imageSource) {
   const img = document.createElement('img');
@@ -49,15 +37,20 @@ function createCustomElement(element, className, innerText) {
   e.innerText = innerText;
   return e;
 }
-
+//
+//
 function cartItemClickListener(event) {
-  let valor = event.target.innerText;
-  // exclui intem clicado do carrinho
-  valor = valor.slice(valor.indexOf('$') + 1);
-  soma(valor);
-  // const carrinhoDeCompras = document.getElementsByTagName('ol')[0];
-  // carrinhoDeCompras.removeChild(event.target);
-  event.target.remove();
+  // const itemExcluido = event.target.parent;
+  const itemExcluido = event.target;
+  const valor = itemExcluido.innerText;
+  subtracao += Number(valor.slice(valor.indexOf('$') + 1));
+  if (somaPrice() === 0) {
+    soma = 0;
+    subtracao = 0;
+  }
+  // pega carrinho e exclui item clicado
+  const carrinhoDeCompras = document.getElementsByTagName('ol')[0];
+  carrinhoDeCompras.removeChild(itemExcluido);
   salvaCarrinho();
 }
 
@@ -70,22 +63,20 @@ function createCartItemElement({ sku, name, salePrice }) {
 }
 
 function getSkuFromProductItem(item) {
- // item = item.target.parentNode;
-  item = item.target.parentNode.querySelector('span.item__sku').innerText;
   // faz uma requição do produto selecionado a API
   fetch(`https://api.mercadolibre.com/items/${item}`)
-  .then((response) => response.json())
+  .then(response => response.json())
   .then(function (produtoAdicionado) {
-    // separa as informacoes do produto selecionado que serao exibidas ( destruturing object)
+    // cria as informacoes do produto selecionado que serao exibidas
     const { id: sku, title: name, price: salePrice } = produtoAdicionado;
     // anexando o produto escolhido dentro do carrinho
     const itemDoCarrinho = document.getElementsByTagName('ol')[0];
     itemDoCarrinho.appendChild(createCartItemElement({ sku, name, salePrice }));
-    /* soma += salePrice;
-    somaPrice(); */
-    soma(salePrice);
     salvaCarrinho();
+    soma += salePrice;
+    somaPrice();
   });
+  // return item.querySelector('span.item__sku').innerText;
 }
 
 function createProductItemElement({ sku, name, image }) {
@@ -97,12 +88,11 @@ function createProductItemElement({ sku, name, image }) {
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
-  //
   const botaoItem = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
-  botaoItem.addEventListener('click', getSkuFromProductItem);
+  //
+  botaoItem.addEventListener('click', () => getSkuFromProductItem(sku));
   section.appendChild(botaoItem);
   items.appendChild(section);
-  //
   items.insertBefore(section, span);
   // return items
 }
@@ -110,10 +100,8 @@ function createProductItemElement({ sku, name, image }) {
 const source = 'https://api.mercadolibre.com/sites/MLB/search?q=computador';
 //
 fetch(source)
-// converte a resposta da requisicao em objeto
   .then(response => response.json())
   .then(function (object) {
-    // acessando um array dentro do objeto onde contem as informacoes desejadas
     object.results.map(function (product) {
       //  quebrando os dados recebido em informacoes do produto
       const { id: sku, title: name, thumbnail: image } = product;
@@ -122,9 +110,9 @@ fetch(source)
       return createProductItemElement({ sku, name, image });
     });
   });
-  if (soma() < 0) total = 0;
 
 window.onload = function onload() {
+  items.appendChild(createCustomElement('span', 'loading', 'LOADING...'));
   /*
   if (document.getElementsByClassName('item').length > 0) {
     document.querySelector('.loading').remove();
@@ -132,22 +120,23 @@ window.onload = function onload() {
   */
   document.getElementsByTagName('ol')[0].innerHTML = localStorage.getItem('carrinho');
   if (localStorage.getItem('carrinho') !== undefined) {
-    //let carregaValor = 0;
+    let carregaValor = 0;
     const carregaCarrinho = document.getElementsByClassName('cart__item');
 
     Array.from(carregaCarrinho).forEach(async (item) => {
       item.addEventListener('click', cartItemClickListener);
-      let valor = item.innerText;
-      valor = Number(valor.slice(valor.indexOf('$') + 1));
-      soma(await valor);
-      //const valor = item.innerText;
-      // carregaValor += Number(valor.slice(valor.indexOf('$') + 1));
+      const valor = item.innerText;
+      carregaValor += Number(valor.slice(valor.indexOf('$') + 1));
     });
-   // soma = carregaValor;
-   // somaPrice();
+    soma = carregaValor;
+    somaPrice();
   }
   setTimeout(() => {
     document.querySelector('.loading').remove();
   }, 700);
 };
-//
+/*
+*/
+// const Carrinho = cartItemClickListener(evento)
+// getSkuFromProductItem(item);
+// createCartItemElement({ sku, name, salePrice });

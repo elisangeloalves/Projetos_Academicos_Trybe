@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 980px;
+}
+
+header {
+  background-color: rgb(62, 92, 154);
+  height: 65px;
+}
+
+.facebook-logo {
+  background: transparent url('images/kindpng_440522.png') no-repeat;
+  background-position: center;
+  background-size: 150px;
+  width: 50%;
+}
+
+.facebook-logo img {
+  height: 55px;
+}
+
+.login {
+  align-items: center;
+  color: white;
+  display: flex;
+  width: 50%;
+}
+
+.email-phone , .password , .button {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.espaco-cadastro {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.cadastro {
+  border: 1px solid #ccd0d5;
+  border-radius: 5px;
+  color: #1c1e21;
+  font-size: 20px;
+  padding: 8px 10px;
+}
+
+.input-celular-email , .input-password {
+  width: 100%;
+}
+
+.first-name-input {
+  margin-right: 10px;
+}

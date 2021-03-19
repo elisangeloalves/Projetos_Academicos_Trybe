@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Minha Lista de Tarefas</header>
+    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+    <input id="texto-tarefa"><!-- o usuário poderá digitar o nome do item que deseja adicionar à lista. // -->
+    <button id="criar-tarefa">Adicionar</button> <!--  e ao clicar nesse botão, um novo item deverá ser criado ao final da lista e o texto do input deve ser limpo. -->
+    <div class="box-Lista">
+    <ol id="lista-tarefas">
+    <!-- - Os itens da lista de tarefas devem ser ordenados por ordem de criação. -->
+    </ol>
+    </div>
+    <button id="remover-selecionado">×</button>
+    <button id="mover-cima">⇧</button>
+    <button id="mover-baixo">⇩</button>
+    <button id="apaga-tudo">Limpar Lista</button><!-- quando clicado deve apagar todos os items da lista. -->
+    <button id="remover-finalizados">Limpar Completos</button><!-- que quando clicado remove somente os elementos finalizados da sua lista. -->
+    <button id="salvar-tarefas">Salvar Lista</button>
+    <script src="script.js"></script>
+</body>
+</html>

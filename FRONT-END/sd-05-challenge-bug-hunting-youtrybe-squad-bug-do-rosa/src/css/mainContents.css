@@ -1,0 +1,87 @@
+main {
+  display: flex;
+  padding: 2.5rem 7.5rem;
+}
+
+.player {
+  display: block;
+  margin-right: 2.5rem;
+  width: 67%;
+}
+
+.video-info {
+  border-bottom: 1px solid #ccc;
+  margin-top: 1.3rem;
+}
+
+.video-info .title {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.sidebar {
+  /* background-color: #3634b1; */
+  width: 31%;
+}
+
+.video-toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-views {
+  color: #555;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.right-menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.right-menu .material-icons,
+.right-menu span {
+  color: #888;
+  font-size: 2rem;
+}
+
+.right-menu .share-btn .material-icons {
+  transform: scale(-1, 1);
+}
+
+.right-menu a span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 0.6rem;
+}
+
+.thumb-wrapper,
+.share-btn,
+.save-btn,
+.options-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.thumb-wrapper {
+  border-bottom: 2px solid #888;
+  padding: 1.3rem 0;
+}
+
+.thumb-up-btn,
+.thumb-down-btn {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1.4rem;
+}
+
+.thumb-down-btn {
+  margin-left: 1.4rem;
+  margin-right: 0;
+}

@@ -1,0 +1,18 @@
+{
+  "requirements": [{
+    "description": "Implementação módulo de acesso à API do Youtube",
+    "bonus": false
+  }, {
+    "description": "Renderizar toda aplicaçao existente",
+    "bonus": false
+  }, {
+    "description": "Funcionalidades Componente Header",
+    "bonus": false
+  }, {
+    "description": "Funcionalidades Componente Search Result",
+    "bonus": false
+  }, {
+    "description": "Funcionalidades Componente Video Page",
+    "bonus": false
+  }]
+}

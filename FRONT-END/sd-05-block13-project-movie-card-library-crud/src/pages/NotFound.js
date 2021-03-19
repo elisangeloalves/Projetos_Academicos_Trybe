@@ -7,14 +7,9 @@ class NotFound extends Component {
     this.state = {
       status: true,
     };
-    this.alteraEstado = this.alteraEstado.bind(this);
   }
 
   componentDidMount() {
-    this.alteraEstado();
-  }
-
-  alteraEstado() {
     setTimeout(() => this.setState({ status: false }), 1500);
   }
 

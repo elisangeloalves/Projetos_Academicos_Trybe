@@ -14,22 +14,17 @@ class EditMovie extends Component {
       movie: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.alteraEstado =  this.alteraEstado.bind(this);
   }
 //
   componentDidMount() {
     const { movie } = this.props;
     movieAPI.getMovie(movie.id)
-     .then(movie => this.alteraEstado(movie));
+     .then((movies) => this.setState({ movie: movies, status: false }));
   }
 
   handleSubmit(newMovie) {
     movieAPI.updateMovie(newMovie);
     this.setState({ shouldRedirect: true, status: false });
-  }
-
-  alteraEstado(movie) {
-    this.setState({ movie, status: false })
   }
 
   render() {

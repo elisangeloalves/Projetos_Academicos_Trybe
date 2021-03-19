@@ -1,0 +1,81 @@
+@charset "utf-8";
+/*Documento CSS*/
+        /*Defina a cor do conteúdo*/
+        body{
+            background: rgb(203, 235, 236);
+        }
+        header{
+            position: fixed;
+            top:0;
+            text-align: center;
+            background-color: blue;
+            width: 100%;
+            text-transform: uppercase;
+            color: rgb(208, 226, 43);
+            border: 4px solid red;
+        }
+        section ul, ol{
+            display: inline-block;
+            list-style-position: inside;
+        }
+        #cabecalho a{
+            font-size: 30px;
+            color:rgb(243, 247, 246);
+            text-decoration: none;
+            padding: 50px;
+        }
+        /*Essa seção é para a borda preta da imagem.*/
+        img {
+            border-color: #000000; 
+            border:thick; 
+            border-style:ridge;
+        }
+        #video p{
+            position: absolute;
+            font-style:italic; 
+            font-size:20px;
+            color:#0000FF;
+            bottom: 5%; 
+            right:30%;
+        }
+        #titulo{
+            padding-top: 80px;
+            color: coral;
+            font-style: normal;
+            font-family: fantasy;
+            margin-left: 10%;
+        }
+        .lado-esquerdo{
+            position: absolute;
+            left: 10%;
+            top: 20%;
+        }
+        .lado-direito{
+            position: absolute;
+            top:10%;
+            right: 15%;
+        }
+        aside {
+            position: absolute;
+            top:500px;
+            left:10%;
+            text-indent: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 2px solid red;
+        }
+        #rodape{
+            background-color: coral;
+            font-size: xx-large;
+            text-align: center;
+            position: absolute;
+            bottom: 0%;
+            width: 99%;
+        }
+        /*Essa seção é para os links
+        a:link{font-weight:normal; color:Navy}
+        a:visited{font-weight:normal; color:Green;}
+        a:hover{font-weight:bold; color: Red; font-variant:small-caps;}
+        /*Essa seção é para a seção do parágrafo*/
+       
+        

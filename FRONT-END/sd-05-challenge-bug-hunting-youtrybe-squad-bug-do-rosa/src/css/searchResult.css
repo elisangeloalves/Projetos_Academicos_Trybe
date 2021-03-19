@@ -1,0 +1,11 @@
+.search-result {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  margin: 15px;
+}
+
+.thumbnail-info .description {
+  margin-top: 10px;
+  font-size: 12px;
+}

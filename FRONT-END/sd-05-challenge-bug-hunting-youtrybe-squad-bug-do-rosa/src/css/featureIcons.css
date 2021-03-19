@@ -1,0 +1,31 @@
+.material-icons {
+  color: #666;
+  font-size: 2.4rem;
+}
+
+.feature-icons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4rem;
+  position: relative;
+  width: 22rem;
+}
+
+.feature-icons .account-icon {
+  color: #b1348a;
+  font-size: 3.5rem;
+}
+
+.bell-icon-badge {
+  background-color: rgb(204, 22, 0);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: 19px;
+  position: absolute;
+  right: 49px;
+  text-align: center;
+  top: 0;
+  width: 19px;
+}

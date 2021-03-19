@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  evaluator_job:
+    runs-on: ubuntu-18.04
+    name: Evaluator job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cypress evaluator step
+        id: test
+        uses: betrybe/cypress-evaluator-action@v1
+      - name: Store evaluation step
+        uses: betrybe/store-evaluation-action@v1
+        with:
+          evaluation-data: ${{ steps.test.outputs.result }}
+          environment: production
+          pr-number: ${{ steps.test.outputs.pr-number }}

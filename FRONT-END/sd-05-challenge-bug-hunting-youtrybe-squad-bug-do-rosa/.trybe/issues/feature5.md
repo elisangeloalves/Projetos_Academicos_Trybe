@@ -1,0 +1,1 @@
+A tela de display do Video selecionado deveria renderizar seus dados de descrição, comentários e videos relacionados. E ao clicar em algum video na barra lateral o mesmo deve redirecionar para uma nova rota de pagina de video, porém a logica não está funcional e acessivel no ambiente de teste.

@@ -1,0 +1,1 @@
+Ao realizar requisições na API do youtube, a mesma não parece tratar a chama assincrona de forma correta e não converte os dados vindos na requisição.

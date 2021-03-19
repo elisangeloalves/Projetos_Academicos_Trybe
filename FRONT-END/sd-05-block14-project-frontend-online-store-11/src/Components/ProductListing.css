@@ -1,0 +1,31 @@
+.left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 0;
+}
+
+.categories-list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-list button {
+  background-color: white;
+  border: none;
+  margin: 10px;
+  text-align: justify;
+  width: 200px;
+}
+
+button:hover {
+  background-color: rgb(241, 241, 116);
+}
+

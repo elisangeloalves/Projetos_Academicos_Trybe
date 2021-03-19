@@ -1,0 +1,12 @@
+.card-container {
+  align-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  width: 800px;
+}
+
+.card-info {
+  margin-top: 50px;
+  padding: 10px;
+  width: 150px;
+}

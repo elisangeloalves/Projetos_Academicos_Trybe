@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
+</head>
+<body>
+  <header >
+    <div class="top-bar">
+    <div class="facebook-logo">
+     <!-- <img src="facebook-logo1png.png" alt="logo do facebook">-->
+    </div>
+    <div class="login">
+      <div class="email-phone">
+        <label id="user-email-phone-label" class="user-email-phone-label">Email ou telefone</label>
+        <input class="user-email-phone" type="text" id="user-email-phone">
+      </div>
+      <div class="password">
+        <label id="user-password-label">Senha</label>
+        <input id="user-password" type="password">
+      </div>
+      <div class="button">
+        <button id="button-login" type="button">Entrar</button>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="left-side">
+      <p>O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.
+      </p>
+      <img id="facebook-networking" src="images/networking.png">
+    </section>
+    <section class="right-side">
+      <div class="open-account">
+        <p>Abra uma conta</p>
+        <p>É rápido e fácil.</p>
+      </div>
+      <form action="" method="GET" class="js-form">
+      <div class="espaco-cadastro">
+        <div class="firstName">
+          <input data-validate-field="name" name="name" class="cadastro first-name-input" type="text" placeholder="Nome">
+        </div>
+        <div class="fullName">
+          <input class="cadastro " type="text" placeholder="Sobrenome">
+        </div>
+      </div>
+      <div class="espaco-cadastro">
+        <input class="cadastro input-celular-email" type="text" placeholder="Celular ou email">
+      </div>
+      <div class="espaco-cadastro">
+        <input class="cadastro input-password" type="password" placeholder="Nova senha">
+      </div>
+      <div>
+        <p>Data de nascimento</p>
+        <input id="datepicker" type="text" placeholder="dd/mm/aaaa">
+      </div>
+      <div>
+        <p>Gênero</p>
+        <input id="female" type="radio" name="gender"  value="Feminino">
+        <label for="female">Feminino</label>
+        <input id="male" type="radio" name="gender" value="Masculino">
+        <label for="male">Masculino</label>
+        <input id="personalizado" type="radio" name="gender" value="Personalizado">
+        <label for="personalizado">Personalizado</label>
+      </div>
+      <button id="facebook-register" type="submit">Cadastre-se</button>
+    </form>
+    </section>
+  </main>
+  <script src="libs/scriptPikaday.js"></script>
+  <script src="script.js">
+  </script>
+</body>
+</html>

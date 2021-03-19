@@ -15,17 +15,21 @@ class MovieList extends Component {
       loading: true,
       error: '',
     };
-    this.update = this.update.bind(this)
+    // this.update = this.update.bind(this)
   }
 
   componentDidMount() {
     movieAPI.getMovies()
-    .then((movies) => this.update(movies));
     // .then(movies => console.log(resposta))
+    .then((movies) => this.setState({ movies, loading: false }), (error) => {
+      this.setState({
+        loading: true,
+        error,
+      });
+    });
   }
 
-  update(movies) { this.setState({ movies, loading: false });
-  }
+  update(newData) { this.setState({ movies: newData, loading: false }); }
 
   // componentWillUpdate(){
   //  movieAPI.getMovies()

@@ -38,35 +38,32 @@ class MovieLibrary extends React.Component {
   }
 
   cadastraMovie(filme) {
-    const { movies } = this.state;
-    // movies.push(filme);
-    // this.setState({ movies: movies });
-    //
-    // this.setState({ movies: this.state.movies.push(filme) });
-    //
-    // this.setState((state) => ({ movies: [...state.movies, filme] }));
-    this.setState({ movies: [...movies, filme] });
+    this.setState((state) => ({ movies: [...state.movies, filme] }));
+  //  console.log(this.state.movies);
   }
 
-  filtraSaida() {
-    const { searchText, bookmarkedOnly, selectedGenre, movies } = this.state;
+  filtraSaida(lista) {
+    const { searchText, bookmarkedOnly, selectedGenre } = this.state;
     if (bookmarkedOnly === true) {
-      return movies.filter((filme) => filme.bookmarked === bookmarkedOnly);
+      return lista.filter((filme) => filme.bookmarked === bookmarkedOnly);
     }
     if (selectedGenre !== '') {
-      return movies.filter((filme) => filme.genre === selectedGenre);
+      return lista.filter((filme) => filme.genre === selectedGenre);
     }
     if (searchText !== '') {
-      return movies.filter((filme) => filme.title.includes(searchText)
+      return lista.filter((filme) => filme.title.includes(searchText)
       || filme.subtitle.includes(searchText)
       || filme.storyline.includes(searchText));
     }
     // console.log(resultado);
-    return movies;
+    return lista;
   }
 
   render() {
     const { searchText, selectedGenre, bookmarkedOnly } = this.state;
+    const { movies } = this.props;
+    // console.log(this.state.filmes);
+    // this.setState(LocalStorage(this.sate));
     return (
       <div>
         <SearchBar
@@ -77,7 +74,7 @@ class MovieLibrary extends React.Component {
           selectedGenre={selectedGenre}
           onSelectedGenreChange={this.onSelectedGenreChange}
         />
-        <MovieList movies={this.filtraSaida()} />
+        <MovieList movies={this.filtraSaida(movies)} />
         <AddMovie onClick={this.cadastraMovie} />
       </div>
     );

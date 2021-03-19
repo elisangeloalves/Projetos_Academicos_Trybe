@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../Trybe_Exercises/exercises"
+		},
+		{
+			"path": "../PROJETOS_TRYBE/sd-05-block5-project-make-me-an-artist"
+		},
+		{
+			"path": "../PROJETOS_TRYBE/sd-05-block5-project-todo-list"
+		},
+		{
+			"path": "../PROJETOS_TRYBE/sd-05-block5-project-meme-generator"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sd-05-block6-project-facebook-signup",
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2
+	}
+}

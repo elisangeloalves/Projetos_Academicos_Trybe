@@ -1,0 +1,6 @@
+.nav {
+  align-items: center;
+  box-shadow: 0px 10px 24px -12px rgba(242, 241, 239, 0.7);
+  display: flex;
+  justify-content: space-between;
+}

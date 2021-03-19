@@ -1,0 +1,11 @@
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3rem;
+  width: 14rem;
+}
+
+.youlogo {
+  width: 10rem;
+}

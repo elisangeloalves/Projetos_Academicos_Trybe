@@ -1,0 +1,100 @@
+.comments {
+  margin-top: 3rem;
+}
+
+.comment-toolbar {
+  align-items: center;
+  display: flex;
+}
+
+.comment-toolbar div:nth-child(1) {
+  /* background-color: yellow; */
+  color: #444;
+  font-size: 1.6rem;
+  margin-right: 3rem;
+}
+
+.comment-toolbar div:nth-child(2) {
+  /* background-color:darksalmon; */
+  align-items: center;
+  color: #999;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.comment-toolbar .material-icons {
+  color: #999;
+  font-size: 2.6rem;
+  margin-right: 1rem;
+}
+
+.add-comment {
+  align-items: baseline;
+  display: flex;
+  margin-top: 1.8rem;
+}
+
+.add-comment .account-icon {
+  color: green;
+  font-size: 5.7rem;
+}
+
+.add-comment input {
+  border-bottom: 0.5px solid #ccc;
+  border: none;
+  color: #aaa;
+  font-size: 1.4rem;
+  margin-left: 2%;
+  outline: none;
+  padding: 1rem 0;
+  transform: translateY(-75%);
+  width: 90.7%;
+}
+
+.comment {
+  display: flex;
+  font-size: 1.4rem;
+  margin: 1.4rem 0;
+}
+.comment-info {
+  margin-left: 2rem;
+}
+
+.comment-info > * {
+  margin-bottom: 0.1rem;
+}
+
+.comment-info div {
+  margin-top: 0.8rem;
+}
+
+.comment-info h3 {
+  font-size: 1.4rem;
+}
+
+.comment-info h3 span {
+  color: #777;
+  font-weight: 200;
+  margin-left: 0.5rem;
+}
+
+.comment-info div {
+  display: flex;
+}
+
+.comment-avatar img {
+  background-color: red;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.comment-info .material-icons {
+  color: #777;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+
+.comment-info div a {
+  margin-right: 2rem;
+}
