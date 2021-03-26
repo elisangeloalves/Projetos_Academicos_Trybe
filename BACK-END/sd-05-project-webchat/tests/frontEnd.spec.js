@@ -37,7 +37,7 @@ describe('Crie um frontend para que as pessoas interajam com o chat', () => {
   it('Será validado que o frontend tem uma caixa pra enviar mensagens', async () => {
     const messageBox = await page.$(dataTestid('message-box'));
     const sendButton = await page.$(dataTestid('send-button'));
-
+      // console.log('TESTE1 => message: ', messageBox, 'sendButton: ', sendButton);
     expect(messageBox).not.toBeNull();
     expect(sendButton).not.toBeNull();
   });
@@ -45,6 +45,7 @@ describe('Crie um frontend para que as pessoas interajam com o chat', () => {
   it('Será validado que o frontend possui um campo onde o usuário pode inserir o nickname e um botão para salvar', async () => {
     const nicknameBox = await page.$(dataTestid('nickname-box'));
     const saveButton = await page.$(dataTestid('nickname-save'));
+    // console.log('TESTE2 => nickname: ', nicknameBox, 'saveButton: ', saveButton);
 
     expect(saveButton).not.toBeNull();
     expect(nicknameBox).not.toBeNull();
@@ -70,6 +71,9 @@ describe('Crie um frontend para que as pessoas interajam com o chat', () => {
     await page.waitForSelector(dataTestid('message'));
 
     const messages = await page.$$eval(dataTestid('message'), (nodes) => nodes.map((n) => n.innerText));
+
+    // console.log('TESTE3 => messages: ', messages);
+
     expect(messages.length).toBeGreaterThanOrEqual(1);
     expect(_.last(messages)).toMatch(RegExp(nickname));
     expect(_.last(messages)).toMatch(RegExp(chatMessage));

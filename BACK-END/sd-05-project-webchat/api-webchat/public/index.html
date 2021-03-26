@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO - trybe</title>
+    <!-- <scrip src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js">
+    </scrip> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" src="./api-webchat/public/style.css" />
+  </head>
+  <body>
+    <section>
+
+      <form action="">
+        <input id="username" data-testid="nickname-box" placeholder="Digite seu usuario" />
+        <button id="saveUser" onclick="console.log('clicou')" value=target type="button" data-testid="nickname-save">Salva usuário</button>
+        
+        <div id="chat"></div>
+        <input id="userMessage" data-testid="message-box" placeholder="Digite sus messagem" />
+        <button type="submit" data-testid="send-button">Enviar mensagem</button>
+      </form>
+    </section>
+    <aside>
+      <ul id="users"></ul>
+    </aside>
+    <script src="../services/formatador.js"></script>
+    
+    <script>
+      const socket = io();
+      // const formatador = require('./api-webchat/services/formatador');
+
+      const form = document.querySelector('form');
+      const saveUser = document.querySelector('#saveUser');
+      const user = document.querySelector('#username');
+      const message = document.querySelector('#userMessage');
+      
+      console.log(user.value, message.value);
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const sendingObject = {
+          nickname: user.value,
+          chatMessage: message.value,
+        };
+        
+        if (user.value && message.value) {
+          // messageRender(`${new Date()} - ${user.value}: ${message.value}`);
+          socket.emit('message', sendingObject);
+        }
+        message.value = '';
+        return false;
+      });
+      
+      saveUser.addEventListener('click', (e) => {
+        console.log('nome: ', e);
+        socket.emit('save-nickName', user.value)
+      });
+      
+      function messageRender(parametro) {
+        const conversa = document.querySelector('#chat');
+        const div = document.createElement('div');
+
+        div.className = 'messages';
+        div.setAttribute('data-testid', 'message');
+        div.textContent = parametro;
+        conversa.append(div);
+      }
+
+      function nickNameRender(p) {
+        const users = document.querySelector('#users');
+        const li = document.createElement('li');
+
+        li.className = 'user';
+        li.setAttribute('data-testid', 'online-user');
+        li.setAttribute('id', p.id)
+        li.textContent = p.usuario;
+        users.appendChild(li);
+      }
+
+
+      socket.on('nickName', (userName) => {
+        console.log('usuario: ', userName.usuario, 'id: ', userName.id);
+        nickNameRender(userName);
+      });
+
+      socket.on('saudacao', (e) => console.log(e));
+    
+      socket.on('message', (msg) => {
+        // if (msg.id !== socket.id) messageRender(msg);
+        // if (!msg.includes(user.value))
+        messageRender(msg);
+      });
+      </script>
+  </body>
+</html>
