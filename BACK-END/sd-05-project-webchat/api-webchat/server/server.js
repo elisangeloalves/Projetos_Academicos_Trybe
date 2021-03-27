@@ -1,6 +1,7 @@
 require('dotenv').config();
 const insertedId = require('mongodb').ObjectId;
 const database = require('../model/models');
+const faker = require('faker');
 
 // const routes = require('../routes/index');
 const PORT = process.env.PORT || 3000;
@@ -41,18 +42,23 @@ if (!env) {
 // ('./config/database')
 // require('mongodb://localhost:27017/webchat');
 let response = [];
+let onlineUser = [];
+
 io.on('connection', (socket) => {
-  console.log(`Nova conexão: ${socket.id}`);
-  socket.emit('saudacao', `Bem vindo! seu id é: ${socket.id}`);
+
+  socket.on('startConnection', (nickname) => { 
+    onlineUser.push({ id: socket.id, nickname });
+  });
+  // socket.emit('saudacao', faker.name.firstName());
   
   socket.on('message', async(data) => {
     console.log(`id do usuario: ${socket.id} usuario: ${data.nickname}  mensagem: ${data.chatMessage}`);
     const message = await database.createMessage({ message: data.chatMessage, idUser: socket.id, name: data.nickname })
     .then((res ) => res);
+
     const chat = `${message.data} - ${message.name}: ${message.message}`;
     console.log(`chat: ${chat}`);
     
-    console.log('teste: ',response);
     
     
     response.push(chat);
@@ -60,15 +66,22 @@ io.on('connection', (socket) => {
     io.emit('message', chat);
   });
   
-  socket.on('save-nickName', async(userName) => {
-    console.log('Nome salvo: ', userName);
-    let user;
-    await database.createUser(userName).then((res) => user = res);
-    console.log('do banco: ',user);
-    io.emit('nickName', user);
+  socket.on('save-nickName', async(user) => {
+    console.log("user:" , user)
+    const idx = onlineUser.findIndex((e) => e.id === user.id );
+    onlineUser[idx] = { id: user.id, nickname: user.nickname };
+    // await database.createUser(userName, socket.id).then((res) => res);
+    // let users = await database.findAllUser().then((res) => res)
+    // console.log('users: ',users);
+    io.emit('nickName', onlineUser);
   });
   
-  socket.on('disconnect', () => {
+  socket.on('disconnect', async () => {
+    // await database.deleteUser(socket.id);
+    onlineUser = onlineUser.filter( id => id.id !== socket.id);
+    // let users = await database.findAllUser().then((res) => res);
+    // socket.remove();
+    io.emit('nickName', onlineUser);
     console.log(
       'Lembre-se de deixar tudo relacionado a "conexão socket" dentro do evento "connection"'
       );
@@ -76,9 +89,11 @@ io.on('connection', (socket) => {
   });
   console.log('array: ', ...response);
 
+  let guest = 1;
   app.get('/', (req, res) => {
     res.status(200).render("index", { 
-      mensagens: 'Histórico de mensagens', req: [...response] });
+      mensagens: 'Histórico de mensagens', req: [...response], guest: `guest ${faker.name.firstName()}` });
+      guest+=1;
   });
   
   server.listen(PORT, () => {

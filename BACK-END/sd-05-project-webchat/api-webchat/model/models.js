@@ -2,11 +2,12 @@ const getConnection = require('./connection');
 const insertedId = require('mongodb').ObjectId;
 const formatador = require('../utils/formatador');
 
-const createUser = async (nickname ) => {
-  const user = await getConnection('users').then((user) => user.insertOne({ nickname }))
+const createUser = async (nickname, idUser) => {
+  const user = await getConnection('users').then((user) => user.insertOne({ nickname, idUser }))
   .then((res) => ({
       id: insertedId(res.insertedId),
-      usuario: res.ops[0].nickname,
+      nickname: res.ops[0].nickname,
+      idUser: res.ops[0].idUser,
     })
     // console.log(res.ops[0]);
 ).catch((err) => console.log(err));
@@ -33,10 +34,24 @@ const findUserMessages = async (idUser) => getConnection('messages').then((msg) 
   .toArray()
 ).catch(err => console.log(err));
 
+const findAllUser = async () => getConnection('users').then((users) => users.find({}, { _id: 0, nickname: 1, idUser: 1 })
+  .toArray()
+).catch(err => console.log(err));
+
+const findAllMessages = async () => getConnection('messages').then((msg) => msg.find({}, { _id: 0, idUser: 1, name: 1, data: 1 })
+  .toArray()
+).catch(err => console.log(err));
+
+const deleteUser = async (idUser) => getConnection('users').then((users) => users.deleteOne({ idUser })
+).catch(err => console.log(err));
+
 module.exports = {
   createUser,
   createMessage,
   findUserMessages,
+  findAllUser,
+  deleteUser,
+  findAllMessages,
 };
 
 

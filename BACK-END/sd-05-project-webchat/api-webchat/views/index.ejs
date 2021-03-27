@@ -14,14 +14,13 @@
     <section>
       <form action="">
         <input id="username" data-testid="nickname-box" placeholder="Digite seu usuario" />
-        <button id="saveUser" onclick="console.log('clicou')" value=target type="button" data-testid="nickname-save">Salva usuário</button>
+        <button id="saveUser" value=target type="submit" data-testid="nickname-save">Salva usuário</button>
         <div id="chat">
           <h1><%= mensagens %></h1>
           <ul>
             <% req.forEach(function(msg){ %>
               <li>
-                <%= msg %>
-                <!-- <%= msg.data %> <%= msg.message %> -->
+                <%=msg%>
               </li>
               <% }) %>
           </ul>
@@ -31,18 +30,25 @@
       </form>
     </section>
     <aside>
-      <ul id="users"></ul>
+      <ul id="users">
+        <li><%=guest%></li>
+      </ul>
     </aside>
   </body>
   <script>
     const socket = io();
+    socket.emit('startConnection', { nickname: '<%=guest%>'});
     const form = document.querySelector('form');
     const saveUser = document.querySelector('#saveUser');
     const user = document.querySelector('#username');
     const message = document.querySelector('#userMessage');
     
-    console.log(user.value, message.value);
-    
+    console.log('id usuario:', socket.id);
+
+    saveUser.addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
@@ -59,8 +65,8 @@
     });
     
     saveUser.addEventListener('click', (e) => {
-      console.log('nome: ', e);
-      socket.emit('save-nickName', user.value)
+      console.log('nome: ', user);
+      socket.emit('save-nickName', { nickname: user.value, id: socket.id })
     });
     
     function messageRender(parametro) {
@@ -73,25 +79,39 @@
       conversa.append(div);
     }
 
-    function nickNameRender(p) {
+    function nickNameRender(param) {
       const users = document.querySelector('#users');
-      const li = document.createElement('li');
-
-      li.className = 'user';
-      li.setAttribute('data-testid', 'online-user');
-      li.setAttribute('id', p.id)
-      li.textContent = p.usuario;
-      users.appendChild(li);
+      users.innerHTML = '';
+      const usuarioLogado = param.filter(id => id.id === socket.id);
+      const usuarios = param.filter(id => id.id !== socket.id);
+      
+      [...usuarioLogado, ...usuarios].forEach((user) => {
+        const li = document.createElement('li');
+        li.className = 'user';
+        li.setAttribute('data-testid', 'online-user');
+        
+        li.setAttribute('id', user.id)
+        li.innerHTML = user.nickname;
+        console.log(li);
+        
+        users.appendChild(li);
+        console.log(users[0]);
+      });
+      
     }
-
-
-    socket.on('nickName', (userName) => {
-      console.log('usuario: ', userName.usuario, 'id: ', userName.id);
-      nickNameRender(userName);
+    
+    
+    socket.on('nickName', (users) => {
+      console.log('user: ',users);
+      nickNameRender(users);
     });
 
-    socket.on('saudacao', (e) => console.log(e));
+    socket.on('saudacao', (e) => {
+      document.querySelector('#username').value = e;
+      console.log(e);
   
+    });
+
     socket.on('message', (msg) => {
       // if (msg.id !== socket.id) messageRender(msg);
       // if (!msg.includes(user.value))
