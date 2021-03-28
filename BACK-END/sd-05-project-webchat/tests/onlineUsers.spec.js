@@ -132,6 +132,7 @@ describe('Informe a todos os clientes quem está online no momento', () => {
     const changedNameUser = Object.values($('[data-testid="online-user"]'))[
       onlineUserPosition
     ].children[0].data;
+
     expect(changedNameUser).toBe(nickname);
   });
 });

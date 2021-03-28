@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
-const { DB_NAME, DB_URL, NODE_ENV } = process.env;
+const { DB_NAME, DB_URL } = process.env;
 
 let schema = null;
 

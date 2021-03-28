@@ -14,7 +14,7 @@
     <section>
       <form action="">
         <input id="username" data-testid="nickname-box" placeholder="Digite seu usuario" />
-        <button id="saveUser" value=target type="submit" data-testid="nickname-save">Salva usuário</button>
+        <button id="saveUser" type="button" data-testid="nickname-save">Salva usuário</button>
         <div id="chat">
           <h1><%= mensagens %></h1>
           <ul>
@@ -31,7 +31,7 @@
     </section>
     <aside>
       <ul id="users">
-        <li><%=guest%></li>
+        <li><%= guest %></li>
       </ul>
     </aside>
   </body>
@@ -42,22 +42,21 @@
     const saveUser = document.querySelector('#saveUser');
     const user = document.querySelector('#username');
     const message = document.querySelector('#userMessage');
+    const guest = document.querySelector('#users').children[0];
     
-    console.log('id usuario:', socket.id);
-
     saveUser.addEventListener('submit', (e) => {
       e.preventDefault();
     });
-
+    
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      const sendingObject = {
-        nickname: user.value,
-        chatMessage: message.value,
-      };
-      
+      console.log('socket nickname: ', socket.nickname)
+      if (!socket.nickname) user.value = guest.innerText;
       if (user.value && message.value) {
+        const sendingObject = {
+          nickname: user.value,
+          chatMessage: message.value,
+        };
         socket.emit('message', sendingObject);
       }
       message.value = '';
@@ -65,24 +64,26 @@
     });
     
     saveUser.addEventListener('click', (e) => {
-      console.log('nome: ', user);
+      socket.nickname = user.value;
+      console.log('nome: ', socket.nickname);
       socket.emit('save-nickName', { nickname: user.value, id: socket.id })
     });
     
     function messageRender(parametro) {
       const conversa = document.querySelector('#chat');
       const div = document.createElement('div');
-
+      
       div.className = 'messages';
       div.setAttribute('data-testid', 'message');
       div.textContent = parametro;
       conversa.append(div);
     }
-
+    
     function nickNameRender(param) {
       const users = document.querySelector('#users');
-      users.innerHTML = '';
+      users.innerHTML= '';
       const usuarioLogado = param.filter(id => id.id === socket.id);
+      
       const usuarios = param.filter(id => id.id !== socket.id);
       
       [...usuarioLogado, ...usuarios].forEach((user) => {
@@ -91,8 +92,8 @@
         li.setAttribute('data-testid', 'online-user');
         
         li.setAttribute('id', user.id)
-        li.innerHTML = user.nickname;
-        console.log(li);
+        li.innerText = user.nickname;
+        console.log('innwe: ',li);
         
         users.appendChild(li);
         console.log(users[0]);
@@ -101,12 +102,15 @@
     }
     
     
-    socket.on('nickName', (users) => {
-      console.log('user: ',users);
-      nickNameRender(users);
-    });
-
-    socket.on('saudacao', (e) => {
+    // socket.on('nickName', (users) => {
+      socket.on('update', (users) => {
+        console.log('guest:', guest);
+        
+        users.forEach(i => console.log('update: ',i.nickname));
+        nickNameRender(users);
+      });
+      
+      socket.on('saudacao', (e) => {
       document.querySelector('#username').value = e;
       console.log(e);
   
