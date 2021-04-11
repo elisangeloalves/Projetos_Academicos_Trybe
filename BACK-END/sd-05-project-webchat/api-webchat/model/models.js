@@ -1,64 +1,70 @@
-const insertedId = require('mongodb').ObjectId;
 const getConnection = require('./connection');
 const formatador = require('../utils/formatador');
+// const insertedId = require('mongodb').ObjectId;
 
-const createUser = async (nickname, idUser) => {
-  const user = await getConnection('users')
-    .then((u) => u.insertOne({ nickname, idUser }))
-    .then(
-      (res) => ({
-        id: insertedId(res.insertedId),
-        nickname: res.ops[0].nickname,
-        idUser: res.ops[0].idUser,
-      }),
-      // console.log(res.ops[0]);
-    )
-    .catch((err) => console.log(err));
-  return user;
-};
-
-const createMessage = async ({ message, idUser, name }) => {
+const createMessage = async ({ id, nickname, chatMessage, type, targetId }) => {
+  const data = formatador(new Date());
   const messages = await getConnection('messages')
-    .then((msg) => msg.insertOne({ message, idUser, name, data: new Date() }))
-    .then((res) =>
-      // console.log(res.ops[0])
-      ({
-        id: insertedId(res.insertedId),
-        idUser: res.ops[0].idUser,
-        message: res.ops[0].message,
-        data: formatador(res.ops[0].data),
-        name: res.ops[0].name,
-      }))
+    .then((msg) => msg.insertOne({ id, nickname, chatMessage, type, targetId, data }))
+    .then((res) => res.ops[0])
+    // ({
+    //   id: insertedId(res.insertedId),
+    //   idUser: res.ops[0].idUser,
+    //   message: res.ops[0].message,
+    //   data: formatador(res.ops[0].data),
+    //   name: res.ops[0].name,
+    // }))
     .catch((err) => console.log(err));
   return messages;
 };
 
-const findUserMessages = async (idUser) =>
+const findUsersMessages = async (id, targetId) =>
   getConnection('messages')
-    .then((msg) => msg.find({ idUser }, { message: 1, idUser: 0, data: 1 }).toArray())
-    .catch((err) => console.log(err));
-
-const findAllUser = async () =>
-  getConnection('users')
-    .then((users) => users.find({}, { _id: 0, nickname: 1, idUser: 1 }).toArray())
-    .catch((err) => console.log(err));
+    .then((msg) =>
+      msg
+        .find({
+          $or: [
+            { id, targetId },
+            { id: targetId, targetId: id },
+          ],
+        })
+        .toArray()).catch((err) => console.log(err));
 
 const findAllMessages = async () =>
   getConnection('messages')
-    .then((msg) => msg.find({}, { _id: 0, idUser: 1, name: 1, data: 1 }).toArray())
+    .then((msg) => msg.find({ targetId: null }).toArray())
     .catch((err) => console.log(err));
 
-const deleteUser = async (idUser) =>
-  getConnection('users')
-    .then((users) => users.deleteOne({ idUser }))
-    .catch((err) => console.log(err));
+// const findAllUser = async () =>
+//   getConnection('users')
+//     .then((users) => users.find({}, { _id: 0, nickname: 1, idUser: 1 }).toArray())
+//     .catch((err) => console.log(err));
 
+// const deleteUser = async (idUser) =>
+//   getConnection('users')
+//     .then((users) => users.deleteOne({ idUser }))
+//     .catch((err) => console.log(err));
+
+// const createUser = async (nickname, idUser) => {
+//   const user = await getConnection('users')
+//     .then((u) => u.insertOne({ nickname, idUser }))
+//     .then(
+//       (res) => ({
+//         id: insertedId(res.insertedId),
+//         nickname: res.ops[0].nickname,
+//         idUser: res.ops[0].idUser,
+//       }),
+//       // console.log(res.ops[0]);
+//     )
+//     .catch((err) => console.log(err));
+//   return user;
+// };
 module.exports = {
-  createUser,
+  // createUser,
   createMessage,
-  findUserMessages,
-  findAllUser,
-  deleteUser,
+  findUsersMessages,
+  // findAllUser,
+  // deleteUser,
   findAllMessages,
 };
 

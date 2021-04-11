@@ -294,7 +294,7 @@ module.exports = connection;
 
 - Será validado que é possível enviar mensagem após alterar o nickname;
 
-### 3 - Elabore o histórico do chat para que as mensagens persistirão.
+### 3 - Elabore o histórico do chat para que as mensagens persistam.
 
 - Você deve configurar um banco de dados MongoDB, onde cada linha contém uma mensagem enviada, e a coleção deve se chamar `messages`;
 
